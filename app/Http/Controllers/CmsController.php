@@ -90,6 +90,7 @@ class CmsController extends Controller
         ->first()
         ->with(['media'])
         ->get();
+        $socials = SocialMediaLink::get();
         // get contacts
         $contact = Contact::first();
         // get values
@@ -97,7 +98,7 @@ class CmsController extends Controller
         $goals = Goal::all();
         $missions = Mission::all();
         // dd($values);
-        return view('cms.about', compact(['about', 'setting', 'contact', 'values', 'goals', 'missions']));
+        return view('cms.about', compact(['about', 'setting', 'contact', 'values', 'goals', 'missions', 'socials']));
     }
     public function blog()
     {
@@ -107,9 +108,10 @@ class CmsController extends Controller
         ->where('site_name_' . $locale, '!=', '')
         ->first()
         ->get();
+        $socials = SocialMediaLink::get();
         $contact = Contact::first();
         $posts = Post::with(['media'])->get();
-        return view('cms.blogindex', compact(['posts', 'setting', 'contact']));
+        return view('cms.blogindex', compact(['posts', 'setting', 'contact', 'socials']));
     }
     public function product()
     {
@@ -119,13 +121,14 @@ class CmsController extends Controller
         ->where('site_name_' . $locale, '!=', '')
         ->first()
         ->get();
+        $socials = SocialMediaLink::get();
         $contact = Contact::first();
 
         $products = Product::with(['category', 'media'])->get();
         $categories = Category::with(['products','media'])->get();
         // dd($categories);
 
-        return view('cms.productindex', compact(['setting', 'contact','products', 'categories']));
+        return view('cms.productindex', compact(['setting', 'contact','products', 'categories', 'socials']));
 
     }
     public function show(Post $post)
@@ -136,9 +139,10 @@ class CmsController extends Controller
         ->where('site_name_' . $locale, '!=', '')
         ->first()
         ->get();
+        $socials = SocialMediaLink::get();
         $contact = Contact::first();
         // dd($post);
-        return view('cms.showpost', compact(['post', 'setting', 'contact']));
+        return view('cms.showpost', compact(['post', 'setting', 'contact', 'socials']));
     }
 
     public function showProduct(Product $product)
@@ -149,9 +153,10 @@ class CmsController extends Controller
         ->where('site_name_' . $locale, '!=', '')
         ->first()
         ->get();
+        $socials = SocialMediaLink::get();
         $contact = Contact::first();
 
-        return view('cms.product', compact(['product', 'setting', 'contact']));
+        return view('cms.product', compact(['product', 'setting', 'contact', 'socials']));
     }
 
 }

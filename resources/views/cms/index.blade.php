@@ -42,18 +42,25 @@
     <div class="title1 section-t-space">
         @if (App::getLocale() == 'ar')
         <h4>عروض خاصة</h4>
+        <h2 class="title-inner1">احدث المنتجات</h2>
             
         @else
         <h4>special offer</h4>
+        <h2 class="title-inner1">Latest Drops</h2>
         
         @endif
-        <h2 class="title-inner1">Latest Drops</h2>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="product-para">
-                    <p class="text-center">Looking for the latest trends in clothing, shoes and accessories? Welcome to our 'Latest Drops' edit, bringing you all the latest styles from all your fave brands.</p>
+                    @if (App::getLocale() == 'ar')
+                        
+                    <p class="text-center">اجود و احدث المنتجات</p>
+                    @else
+                        
+                    <p class="text-center">the best products with the best prices</p>
+                    @endif
                 </div>
             </div>
         </div>
@@ -100,7 +107,7 @@
     <!-- Parallax banner -->
     <section class="p-0">
         <div class="full-banner parallax text-center p-left">
-            <img src="/images/banner.jpg" alt="" class="bg-img blur-up lazyload">
+            <img src="/images/banner.png" alt="" class="bg-img blur-up lazyload">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -128,8 +135,15 @@
 
     <!-- Tab product -->
     <div class="title1 section-t-space">
-        <h4>exclusive products</h4>
-        <h2 class="title-inner1">everyday casual</h2>
+
+        @if (App::getLocale() == 'ar')
+        <h4>عروض خاصة</h4>
+        <h2 class="title-inner1">المنتجات الحصرية</h2>
+            
+        @else
+        <h4>special offer</h4>
+        <h2 class="title-inner1">Exclusive Products</h2>
+        @endif
     </div>
     <section class="section-b-space pt-0 ratio_asos">
         <div class="container">

@@ -9,12 +9,10 @@
             @endforeach
                 <h3>{{ $post->{'title_'.app()->getlocale()} }}</h3>
                 <ul class="post-social">
-                    <li>25 January 2018</li>
+                    <li>{{$post->created_at->format('d-m-y')}}</li>
                     <li>Posted By : Admin Admin</li>
-                    <li><i class="fa fa-heart"></i> 5 Hits</li>
-                    <li><i class="fa fa-comments"></i> 10 Comment</li>
                 </ul>
-                <p>{{ $post->{'body_'.app()->getlocale()} }}</p>
+                <p>{!! $post->{'body_'.app()->getlocale()} !!}</p>
             </div>
         </div>
         

@@ -30,8 +30,11 @@
                                     
                                     <div id="selectSize"
                                         class="addeffect-section product-description border-product">
-                                        <h6 class="product-title size-text" <span><a href=""
-                                                    data-bs-toggle="modal" data-bs-target="#sizemodal">Details</a></span></h6>
+                                        <h6 class="product-title size-text" <span>
+                                            <a href=""
+                                                    data-bs-toggle="modal" data-bs-target="#sizemodal">
+                                                    Details
+                                            </a></span></h6>
                                         <div class="modal fade" id="sizemodal" tabindex="-1" role="dialog"
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -43,7 +46,7 @@
                                                                 aria-hidden="true">&times;</span></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        {!! $product->{'description_'.app()->getLocale() }!!}
+                                                        {!! $product->{'description_'.app()->getLocale() } !!}
                                                     </div>
                                                 </div>
                                             </div>

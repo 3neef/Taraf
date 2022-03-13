@@ -41,7 +41,39 @@
                     </div>
                 </div>
                 
-    
+                <div class="col">
+                    <div class="sub-title">
+                        <div class="footer-title">
+                            @if (App::getLocale() == 'ar')
+                                
+                            <h4>الصفحات</h4>
+                            @else
+                                
+                            <h4>Pages</h4>
+                            @endif
+
+                        </div>
+                        <div class="footer-contant">
+                            <ul>
+                                @if (App::getLocale() == 'ar')
+                                <li><a href="{{route('taraf','?language='.App::getLocale())}}">الرئيسية</a></li>
+                                <li><a href="{{route('about','?language='.App::getLocale())}}">عن المؤسسة</a></li>
+                                <li><a href="{{route('products','?language='.App::getLocale())}}">المنتجات</a></li>
+                                <li>
+                                    <a href="{{route('blog','?language='.App::getLocale())}}">مدونة</a>
+                                   
+                                </li>
+                                @else
+                                <li><a href="{{route('taraf','?language='.App::getLocale())}}">Home</a></li>
+                                <li><a href="{{route('about','?language='.App::getLocale())}}">About Us</a></li>
+                                <li><a href="{{route('products','?language='.App::getLocale())}}">Products</a></li>
+                                <li><a href="{{route('blog','?language='.App::getLocale())}}">blog</a></li>
+                                
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="col">
                     <div class="sub-title">
                         <div class="footer-title">
@@ -63,7 +95,6 @@
                                 <li><i class="fa fa-phone"></i>{{$contact->additional_phone}}</li>
                                 @endif
                                 <li><i class="fa fa-envelope-o"></i>Email Us: <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
-                                a
                                 <li><i class="fa fa-fax"></i>Fax: 123456</li>
                             </ul>
                         </div>
