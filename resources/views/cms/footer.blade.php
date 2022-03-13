@@ -15,11 +15,27 @@
                             @endforeach
                         <div class="footer-social">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                                @foreach ($socials as $link)
+                                  @if ($link->name == 'facebook')
+                                  <li><a href="{{$link->url}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                  @endif  
+                                  @if ($link->name == 'twitter')
+                                      
+                                  <li><a href="{{$link->url}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                  @endif
+                                  @if ($link->name == 'instagram')
+                                      
+                                  <li><a href="{{$link->url}}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                  @endif
+                                  @if ($link->name == 'linkedin')
+                                      
+                                  <li><a href="{{$link->url}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                  @endif
+                                  @if ($link->name == 'youtube')              
+                                  <li><a href="{{$link->url}}"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                  @endif
+                                  
+                                @endforeach
                             </ul>
                         </div>
                     </div>

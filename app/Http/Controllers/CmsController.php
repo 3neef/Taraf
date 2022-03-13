@@ -15,6 +15,7 @@ use App\Models\Contact;
 use App\Models\Value;
 use App\Models\Goal;
 use App\Models\Mission;
+use App\Models\SocialMediaLink;
 
 
 
@@ -32,6 +33,8 @@ class CmsController extends Controller
         ->where('site_name_' . $locale, '!=', '')
         ->first()
         ->get();
+
+        $socials = SocialMediaLink::get();
         // products query\
         $products = Product::with(['category', 'media'])->get();
         // $products = Product::select(['id', 'name_' . $locale, 'description_' . $locale, 'price'])
@@ -64,10 +67,10 @@ class CmsController extends Controller
         $contact = Contact::first();
         // App::setLocale('ar');
 
-        // dd($clients);
+        // dd($socials);
 
         return view('cms.index',
-        compact(['setting', 'products', 'categories', 'services', 'posts', 'galleries', 'clients','contact']));
+        compact(['setting', 'products', 'categories', 'services', 'posts', 'galleries', 'clients','contact', 'socials']));
         
     }
 
@@ -120,6 +123,7 @@ class CmsController extends Controller
 
         $products = Product::with(['category', 'media'])->get();
         $categories = Category::with(['products','media'])->get();
+        // dd($categories);
 
         return view('cms.productindex', compact(['setting', 'contact','products', 'categories']));
 

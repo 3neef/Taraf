@@ -153,33 +153,24 @@
                                             @foreach ($product->images as $key => $media)
                                                 
                                             <div class="front">
-                                                <a href="product-page(no-sidebar).html"><img
+                                                <a href="{{route('show.product', $product)}}"><img
                                                     src="{{ $media->getUrl() }}"
                                                     class="img-fluid blur-up lazyload bg-img" alt="">
                                                 </a>
                                             </div>
                                             <div class="back">
-                                                <a href="product-page(no-sidebar).html"><img
+                                                <a href="{{route('show.product', $product)}}"><img
                                                     src="{{ $media->getUrl() }}"
                                                     class="img-fluid blur-up lazyload bg-img" alt=""></a>
                                                 </div>
                                             @endforeach
-                                              <div class="cart-info cart-wrap">
-                                                        <button data-bs-toggle="modal" data-bs-target="#addtocart"
-                                                        title="Add to cart"><i class="ti-shopping-cart"></i></button> <a
-                                                        href="javascript:void(0)" title="Add to Wishlist"><i
-                                                        class="ti-heart" aria-hidden="true"></i></a> <a href="#"
-                                                        data-bs-toggle="modal" data-bs-target="#quick-view"
-                                                    title="Quick View"><i class="ti-search" aria-hidden="true"></i></a>
-                                                    <a href="compare.html" title="Compare"><i class="ti-reload"
-                                                        aria-hidden="true"></i></a>
-                                             </div>
+                                              
                                         </div>
                                         <div class="product-detail">
                                             <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
                                                 class="fa fa-star"></i> <i class="fa fa-star"></i> <i
                                                     class="fa fa-star"></i></div>
-                                            <a href="product-page(no-sidebar).html">
+                                            <a href="{{route('show.product', $product)}}">
                                                 <h6>{{ $product->{'name_'.app()->getLocale()} }}</h6>
                                             </a>
                                             <h4>${{$product->price}}</h4>

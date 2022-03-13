@@ -1,8 +1,14 @@
 @extends('layouts.cms')
 @section('content')
 <div class="title1 section-t-space">
-    <h4>exclusive products</h4>
-    <h2 class="title-inner1">everyday casual</h2>
+    @if (App::getLocale() == 'ar')
+    <h4>منتجاتنا</h4>
+    <h2 class="title-inner1">أجود انواع المنتجات</h2>
+    @else
+        
+    <h4>Products</h4>
+    <h2 class="title-inner1">Top quality products</h2>
+    @endif
 </div>
 <section class="section-b-space pt-0 ratio_asos">
     <div class="container">
@@ -25,13 +31,13 @@
                                     <div class="img-wrapper">
                                         @foreach ($product->images as $key => $media)
                                         <div class="front">
-                                            <a href="product-page(no-sidebar).html">
+                                            <a href="{{route('show.product', $product)}}">
                                                 <img alt="" src="{{ $media->getUrl() }}"
                                                     class="img-fluid blur-up lazyload bg-img">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="product-page(no-sidebar).html">
+                                            <a href="{{route('show.product', $product)}}">
                                                 <img alt="" src="{{ $media->getUrl() }}"
                                                     class="img-fluid blur-up lazyload bg-img">
                                             </a>
