@@ -5,7 +5,7 @@
             <div class="col-sm-12">
                 <div class="main-menu">
                     <div class="menu-left">
-                        <div class="navbar">
+                        {{-- <div class="navbar">
                             <a href="javascript:void(0)" onclick="openNav()">
                                 <div class="bar-style"><i class="fa fa-bars sidebar-bar" aria-hidden="true"></i>
                                 </div>
@@ -34,7 +34,7 @@
                                     </ul>
                                 </nav>
                             </div>
-                        </div>
+                        </div> --}}
                         @foreach ($setting as $setting )
                         
                         <div class="brand-logo">
@@ -48,11 +48,11 @@
                             <nav id="main-nav">
                                 <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
                                 <ul id="main-menu" class="sm pixelstrap sm-horizontal">
+                                    @if (App::getLocale() == 'ar')
                                     <li>
-                                        <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2"
+                                        <div class="mobile-back text-end">عودة<i class="fa fa-angle-right ps-2"
                                                 aria-hidden="true"></i></div>
                                     </li>
-                                    @if (App::getLocale() == 'ar')
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">الرئيسية</a></li>
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">عن المؤسسة</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">المنتجات</a></li>
@@ -66,6 +66,10 @@
                                         </ul> --}}
                                     </li>
                                     @else
+                                    <li>
+                                        <div class="mobile-back text-end">Back<i class="fa fa-angle-right ps-2"
+                                                aria-hidden="true"></i></div>
+                                    </li>
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">Home</a></li>
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">About Us</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">Products</a></li>

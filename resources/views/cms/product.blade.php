@@ -31,26 +31,7 @@
                                     <div id="selectSize"
                                         class="addeffect-section product-description border-product">
                                         <h6 class="product-title size-text" <span>
-                                            <a href=""
-                                                    data-bs-toggle="modal" data-bs-target="#sizemodal">
-                                                    Details
-                                            </a></span></h6>
-                                        <div class="modal fade" id="sizemodal" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">{{$product->{'name_'.app()->getLocale() } }}</h5>
-                                                        <button type="button" class="btn-close"
-                                                            data-bs-dismiss="modal" aria-label="Close"><span
-                                                                aria-hidden="true">&times;</span></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        {!! $product->{'description_'.app()->getLocale() } !!}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            {!! $product->{'description_'.app()->getLocale() } !!}</span></h6>
                                     </div>
                                     <div class="product-count">
                                     </div>

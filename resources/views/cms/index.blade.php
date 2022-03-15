@@ -80,18 +80,18 @@
                                 @foreach ($product->images as  $media)
                                 @if ($media)
                                     <div class="front">
-                                    <a href="product-page(no-sidebar).html"><img src="{{ $media->getUrl() }}"
+                                    <a href="{{route('show.product', $product)}}"><img src="{{ $media->getUrl() }}"
                                                 class="img-fluid blur-up lazyload bg-img" alt=""></a>
                                     </div>
                                     <div class="back">
-                                        <a href="product-page(no-sidebar).html"><img src="{{ $media->getUrl() }}"
+                                        <a href="{{route('show.product', $product)}}"><img src="{{ $media->getUrl() }}"
                                                 class="img-fluid blur-up lazyload bg-img" alt=""></a>
                                     </div>
                                 @endif
                                 @endforeach
                             </div>
                             <div class="product-detail">
-                                <a href="product-page(no-sidebar).html">
+                                <a href="{{route('show.product', $product)}}">
                                     <h6>{{ $product->{'name_'.app()->getLocale()} }}</h6>
                                 </a>
                                 <h4>${{$product->price}}</h4>
