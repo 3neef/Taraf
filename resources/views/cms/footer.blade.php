@@ -43,7 +43,7 @@
                                 <li><a href="{{route('products','?language='.App::getLocale())}}">المنتجات</a></li>
                                 <li>
                                     <a href="{{route('blog','?language='.App::getLocale())}}">مدونة</a>
-                                   
+
                                 </li>
                                 @else
                                 <li><a href="{{route('taraf','?language='.App::getLocale())}}">Home</a></li>
@@ -77,7 +77,6 @@
                                 <li><i class="fa fa-phone"></i>{{$contact->additional_phone}}</li>
                                 @endif
                                 <li><i class="fa fa-envelope-o"></i>Email Us: <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
-                                <li><i class="fa fa-fax"></i>Fax: 123456</li>
                             </ul>
                         </div>
                     </div>
@@ -92,27 +91,6 @@
                     <div class="footer-end">
                         <p><i class="fa fa-copyright" aria-hidden="true"></i> 2022  powered by
                             Flix Technology</p>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-md-6 col-sm-12">
-                    <div class="payment-card-bottom">
-                        <ul>
-                            <li>
-                                <a href="#"><img src="/assets/images/icon/visa.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="/assets/images/icon/mastercard.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="/assets/images/icon/paypal.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="/assets/images/icon/american-express.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="/assets/images/icon/discover.png" alt=""></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
