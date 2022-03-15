@@ -5,9 +5,7 @@
         <div class="slide-1 home-slider">
             @foreach ($galleries as $gallery)
             @if ($gallery->is_sliderable == 'yes')
-            @if ($gallery->image)
-                
-            @endif
+           
             <div>
                 <div class="home  text-center">
                     <img src="{{ $gallery->image->getUrl() }}" alt="" class="bg-img blur-up lazyload">
@@ -325,14 +323,58 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    @if (App::getLocale() == 'ar')
+                    
+                    <h2 class="title-borderless">عملائنا</h2>
+                    @else
+                    <h2 class="title-borderless">Our Clients</h2>
+                        
+                    @endif
                     <div class="slide-6 no-arrow">
                         @foreach ($clients as $client)
                             
+                        @if ($client->is_partner == 'no')
+                                
                         <div>
                             <div class="logo-block">
                                 <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" width="80" height="60"></a>
                             </div>
                         </div>
+                    
+                            
+                        @endif
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-b-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    @if (App::getLocale() == 'ar')
+                    
+                    <h2 class="title-borderless">شركائنا</h2>
+                    @else
+                    <h2 class="title-borderless">Our Partners</h2>
+                        
+                    @endif
+                    <div class="slide-6 no-arrow">
+                        @foreach ($clients as $client)
+                            @if ($client->is_partner == 'yes')
+                                
+                            <div>
+                                <div class="logo-block">
+                                    <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" width="80" height="60"></a>
+                                </div>
+                            </div>
+                        
+                                
+                            @endif
                         @endforeach
 
                     </div>

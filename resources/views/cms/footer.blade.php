@@ -28,10 +28,10 @@
                         <div class="footer-title">
                             @if (App::getLocale() == 'ar')
                                 
-                            <h4>الصفحات</h4>
+                            <h4>روابط مفيدة</h4>
                             @else
                                 
-                            <h4>Pages</h4>
+                            <h4>Useful Links</h4>
                             @endif
 
                         </div>
@@ -60,10 +60,10 @@
                     <div class="sub-title">
                         <div class="footer-title">
                             @if (app()->getLocale() == 'ar')
-                            <h4>معلومات المتجر</h4>
+                            <h4>تفاصيل الاتصال</h4>
                                 
                             @else
-                            <h4>store information</h4>
+                            <h4>Contact information</h4>
                                 
                             @endif
                         </div>
