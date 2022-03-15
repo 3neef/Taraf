@@ -71,12 +71,25 @@
                             <ul class="contact-list">
                                 <li><i class="fa fa-map-marker"></i>{!! $contact->address !!}
                                 </li>
-                                <li><i class="fa fa-phone"></i>{{$contact->phone}}</li>
+                                @if (app()->getLocale() == 'ar')
+
+                                <li><i class="fa fa-phone"></i>هاتفنا على:  <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
                                 @if ($contact->additional_phone)
                                     
-                                <li><i class="fa fa-phone"></i>{{$contact->additional_phone}}</li>
+                                <li><i class="fa fa-phone"></i>او على :<a href="tel:{{$contact->additional_phone}}"> {{$contact->additional_phone}}</a></li>
                                 @endif
-                                <li><i class="fa fa-envelope-o"></i>Email Us: <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
+                                <li><i class="fa fa-envelope-o"></i>راسلنا على : <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
+                                
+                            @else
+                           
+                            <li><i class="fa fa-phone"></i>Call us at: <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
+                            @if ($contact->additional_phone)
+                                
+                            <li><i class="fa fa-phone"></i>Or at: <a href="tel:{{$contact->additional_phone}}"> {{$contact->additional_phone}}</a></li>
+                            @endif
+                            <li><i class="fa fa-envelope-o"></i>Email Us: <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
+                                
+                            @endif
                             </ul>
                         </div>
                     </div>
