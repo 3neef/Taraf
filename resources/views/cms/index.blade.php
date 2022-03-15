@@ -180,9 +180,6 @@
                                             @endforeach
                                         </div>
                                         <div class="product-detail">
-                                            <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                                class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                                    class="fa fa-star"></i></div>
                                             <a href="{{route('show.product', $product)}}">
                                                 <h6>{{ $product->{'name_'.app()->getLocale()} }}</h6>
                                             </a>
@@ -224,7 +221,56 @@
         </section>
     </div>
     <!-- service layout  end -->
-
+    <section class="about-page section-b-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title4">
+                        @if (App::getLocale() == 'ar')
+                        <h2 class="title-inner4">مسيرتنا </h2>
+                        @else
+                        
+                        <h2 class="title-inner4">Our History</h2>
+                        @endif
+                        <div class="line mb-0">
+                         <span></span>
+                        </div>
+                       </div>
+                </div>
+                @if (App::getLocale() == 'ar')
+                <div class="col-sm-12">
+                    <h3>&#9839; 2014</h2>
+                    <h4>تأسيس الشركة بنشاط النقل
+                        البري بالشاحنات للبضائع و المعدات</h4>
+                        <h3>&#9839; 2016</h3>
+                        <h4>توزيع المياة المعدنية المعبأة</h4>
+                        <h3>&#9839; 2017</h3>
+                        <h4>إضافة نشاط الوساطة التجارية</h4>
+                        <h3>&#9839; 2019</h3>
+                        <h4>التوقف الكلي عن توزيع المياة المعدنية
+                            التوسع في نشاط السمسرة التجارية</h4>
+                            <h3>&#9839; 2022</h3>
+                            <h4>ومازلنا مستمرين بقوة</h4>
+                </div>
+                    
+                @else
+                <div class="col-sm-12">
+                    <h3>&#9839; 2014</h2>
+                    <h4>Establishment of the company with the activity of road transport by truck of goods and equipment</h4>
+                        <h3>&#9839; 2016</h3>
+                        <h4>Bottled mineral water distribution</h4>
+                        <h3>&#9839; 2017</h3>
+                        <h4>Add a commercial brokerage activity</h4>
+                        <h3>&#9839; 2019</h3>
+                        <h4>Total cessation of mineral water distribution Expansion of commercial brokerage activity</h4>
+                            <h3>&#9839; 2022</h3>
+                            <h4>And we're still going strong</h4>
+                </div>
+                    
+                @endif
+            </div>
+        </div>
+    </section>
 
     <!-- blog section -->
     <div class="container">
@@ -268,7 +314,7 @@
                                     <p>{{ $post->{'title_'.app()->getlocale()} }}</p>
                                 </a>
                                 <hr class="style1">
-                                <h6>by: John Dio , 2 Comment</h6>
+                                {{-- <h6>by: John Dio , 2 Comment</h6> --}}
                             </div>
                         </div>
                         @endforeach
@@ -279,7 +325,47 @@
         </div>
     </section>
     <!-- blog section end -->
-
+    <section class="about-page section-b-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title4">
+                        @if (App::getLocale() == 'ar')
+                        <h2 class="title-inner4">لماذا نحن</h2>
+                        @else
+                        
+                        <h2 class="title-inner4">Why Us</h2>
+                        @endif
+                        <div class="line mb-0">
+                         <span></span>
+                        </div>
+                       </div>
+                </div>
+                @if (App::getLocale() == 'ar')
+                <div class="col-sm-12">
+                    <h4>لماذا عليكم اختيارنا؟</h4>
+                    <h5>&#9832; حلقة الربط وجسر التواصل و التفاهم بين
+                        العملاء وإستثمارتهم</h5>
+                    <h5>&#9832; نقرب وجهات النظر بين المستثمرين</h5>
+                    <h5>&#9832; نحن الحلقة التي تربط أطراف النجاح</h5>
+                    <h5>&#9832; نشارك في تجاوز الصعوبات الإستثمارية</h5>
+                    <h5>&#9832; نعمل على جعل حلم المستثمرين واقعا</h5>
+                </div>
+                    
+                @else
+                <div class="col-sm-12">
+                    <h4>Why should you choose us?</h4>
+                    <h5>&#9832; The linking ring and the bridge of communication and understanding between customers and their investments</h5>
+                    <h5>&#9832; We bring the views of investors closer</h5>
+                    <h5>&#9832; We are the link that connects the parties to success</h5>
+                    <h5>&#9832; We participate in overcoming investment difficulties</h5>
+                    <h5>&#9832; We are working to make the dream of investors a reality</h5>
+                </div>
+                    
+                @endif
+            </div>
+        </div>
+    </section>
 
     <!-- instagram section -->
     <section class="instagram ratio_square">
@@ -337,7 +423,7 @@
                                 
                         <div>
                             <div class="logo-block">
-                                <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" width="80" height="60"></a>
+                                <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" width="320" height="100"></a>
                             </div>
                         </div>
                     
@@ -369,7 +455,7 @@
                                 
                             <div>
                                 <div class="logo-block">
-                                    <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" width="80" height="60"></a>
+                                    <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" width="250" height="100"></a>
                                 </div>
                             </div>
                         
