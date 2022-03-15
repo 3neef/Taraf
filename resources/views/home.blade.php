@@ -15,7 +15,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Welcome taraf Admin
                 </div>
             </div>
         </div>

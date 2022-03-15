@@ -50,7 +50,7 @@
                                 <ul id="main-menu" class="sm pixelstrap sm-horizontal">
                                     @if (App::getLocale() == 'ar')
                                     <li>
-                                        <div class="mobile-back text-end">عودة<i class="fa fa-angle-right ps-2"
+                                        <div class="mobile-back text-end">عودة<i class="fa fa-angle-left ps-2"
                                                 aria-hidden="true"></i></div>
                                     </li>
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">الرئيسية</a></li>
