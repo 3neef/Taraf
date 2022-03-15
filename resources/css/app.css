@@ -1,0 +1,9 @@
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(https://www.fontstatic.com/fonts/flat-jooza/flat-jooza-regular.woff);
+  }
+  * {
+    font-family: myFirstFont;
+}

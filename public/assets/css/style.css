@@ -26012,3 +26012,11 @@ body.rtl .account-setting {
 @media (max-width: 360px) {
   .rtl .timer span .padding-l {
     padding-right: 10px; } }
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('/public/fonts/Amiri/Amiri-Bold.ttf');
+  }
+  * {
+    font-family: myFirstFont;
+}

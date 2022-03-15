@@ -68,7 +68,7 @@ class CmsController extends Controller
         // App::setLocale('ar');
 
         // dd($socials);
-
+        // dd($products);
         return view('cms.index',
         compact(['setting', 'products', 'categories', 'services', 'posts', 'galleries', 'clients','contact', 'socials']));
         
@@ -126,7 +126,7 @@ class CmsController extends Controller
 
         $products = Product::with(['category', 'media'])->get();
         $categories = Category::with(['products','media'])->get();
-        // dd($categories);
+        // dd($products->images);
 
         return view('cms.productindex', compact(['setting', 'contact','products', 'categories', 'socials']));
 
@@ -155,7 +155,7 @@ class CmsController extends Controller
         ->get();
         $socials = SocialMediaLink::get();
         $contact = Contact::first();
-
+        
         return view('cms.product', compact(['product', 'setting', 'contact', 'socials']));
     }
 

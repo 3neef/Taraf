@@ -77,15 +77,17 @@
                         @foreach ($products as $product )
                         <div class="product-box">
                             <div class="img-wrapper">
-                                @foreach ($product->images as $key => $media)
-                                <div class="front">
+                                @foreach ($product->images as  $media)
+                                @if ($media)
+                                    <div class="front">
                                     <a href="product-page(no-sidebar).html"><img src="{{ $media->getUrl() }}"
-                                            class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                                </div>
-                                <div class="back">
-                                    <a href="product-page(no-sidebar).html"><img src="{{ $media->getUrl() }}"
-                                            class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                                </div>
+                                                class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                                    </div>
+                                    <div class="back">
+                                        <a href="product-page(no-sidebar).html"><img src="{{ $media->getUrl() }}"
+                                                class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                                    </div>
+                                @endif
                                 @endforeach
                             </div>
                             <div class="product-detail">
@@ -158,10 +160,10 @@
                             
                         </ul>
                         <div class="tab-content-cls">
-                            @foreach ($categories as $category)
-                            <div id="tab-{{$category->id}}" class="tab-content ">
+                            @foreach ($products as $product)
+                            <div id="tab-{{$product->category->id}}" class="tab-content ">
                                 <div class="no-slider row">
-                                    @foreach ($category->products as $product )
+                                    {{-- @foreach ($category->products as $product ) --}}
                                     <div class="product-box">
                                         <div class="img-wrapper">
                                             @foreach ($product->images as $key => $media)
@@ -178,7 +180,6 @@
                                                     class="img-fluid blur-up lazyload bg-img" alt=""></a>
                                                 </div>
                                             @endforeach
-                                              
                                         </div>
                                         <div class="product-detail">
                                             <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
@@ -190,7 +191,7 @@
                                             <h4>${{$product->price}}</h4>
                                         </div>
                                     </div>
-                                    @endforeach
+                                    {{-- @endforeach --}}
                                 </div>
                             </div>                                
                             @endforeach
@@ -232,8 +233,15 @@
         <div class="row">
             <div class="col">
                 <div class="title1 section-t-space">
-                    <h4>From the Blog</h4>
-                    <h2 class="title-inner1">Fashion for you</h2>
+                    @if (App::getLocale() == 'ar')
+                    {{-- <h4></h4> --}}
+                    <h2 class="title-inner1">من المدونة</h2>
+                        
+                    @else
+                    
+                    {{-- <h4></h4> --}}
+                    <h2 class="title-inner1">From the Blog</h2>
+                    @endif
                 </div>
             </div>
         </div>
@@ -243,31 +251,29 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="slide-3 no-arrow slick-default-margin">
-                      @foreach ($posts as $post)
-                      <div class="col-md-12">
-                          <a href="#">
-                              <div class="classic-effect">
-                                  <div>
-                                      @foreach ($post->image as $media)
-
-                                      <img src="{{$media->getUrl()}}" class="img-fluid blur-up lazyload bg-img"
-                                      alt="">
-                                      
-                                      @endforeach
-                                  </div>
-                                  <span></span>
-                              </div>
-                          </a>
-                          <div class="blog-details">
-                              <h4>{{$post->created_at->format('Y-m-d H:i:s')}}</h4>
-                              <a href="#">
-                                  <p>{{ $post->{'title_'.app()->getlocale()} }}</p>
-                              </a>
-                              <hr class="style1">
-                              <h6>by: John Dio , 2 Comment</h6>
-                          </div>
-                      </div>
-                      @endforeach
+                        @foreach ($posts as $post)
+                        <div class="col-md-12">
+                            <a href="{{route('show.post', $post)}}">
+                                <div class="classic-effect">
+                                    <div>
+                                        @foreach ($post->image as $media)
+                                        <img src="{{$media->getUrl()}}" class="img-fluid blur-up lazyload bg-img"
+                                        alt="">
+                                        @endforeach
+                                    </div>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <div class="blog-details">
+                                <h4>{{$post->created_at->format('M d, Y H:i:s')}}</h4>
+                                <a href="{{route('show.post', $post)}}">
+                                    <p>{{ $post->{'title_'.app()->getlocale()} }}</p>
+                                </a>
+                                <hr class="style1">
+                                <h6>by: John Dio , 2 Comment</h6>
+                            </div>
+                        </div>
+                        @endforeach
 
                     </div>
                 </div>
@@ -282,7 +288,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 p-0">
+                    @if (App::getLocale() == 'ar')
+                    
+                    <h2 class="title-borderless">استوديو الصور</h2>
+                    @else
                     <h2 class="title-borderless">Our Gallery</h2>
+                        
+                    @endif
                     <div class="slide-7 no-arrow slick-instagram">
                         @foreach ($galleries as $gallery)
                 

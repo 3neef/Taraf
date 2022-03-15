@@ -25,8 +25,6 @@
                                         </a>
                                         <ul class="post-social">
                                             <li>Posted By : Admin Admin</li>
-                                            {{-- <li><i class="fa fa-heart"></i> 5 Hits</li>
-                                            <li><i class="fa fa-comments"></i> 10 Comment</li> --}}
                                         </ul>
                                         {!! $post->{'body_'.app()->getlocale()} !!}</p>
                                     </div>
