@@ -43,7 +43,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    @foreach ($item->image as $media )
+                    @foreach ($item->images as $media )
                         
                     <div class="banner-section">
                         <img src="{{ $media->getUrl() }}"
@@ -90,7 +90,7 @@
                                 @endif
                                 @foreach ($values as $value)
                                     
-                                <p>&diams;{!! $value->{'description_'.app()->getLocale()} !!}</p> <br>
+                                <p>&#9867;{!! $value->{'description_'.app()->getLocale()} !!}</p> <br>
                                 @endforeach
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                                 @endif
                                 @foreach ($goals as $goal)
                                     
-                                <p>&diams;{!! $goal->{'description_'.app()->getLocale()} !!}</p> <br>
+                                <p>&#9867;{!! $goal->{'description_'.app()->getLocale()} !!}</p> <br>
                                 @endforeach
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                                 @endif
                                 @foreach ($missions as $mission)
                                     
-                                <p>&diams;{!! $mission->{'description_'.app()->getLocale()} !!}</p> <br>
+                                <p>&#9867;{!! $mission->{'description_'.app()->getLocale()} !!}</p> <br>
                                 @endforeach
                             </div>
                         </div>

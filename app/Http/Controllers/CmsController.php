@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Support\Facades\App;
 use App\Models\Setting;
-use App\Models\AboutUs;
+use App\Models\About;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Service;
@@ -84,7 +84,7 @@ class CmsController extends Controller
         ->first()
         ->get();
         //get about data
-        $about = AboutUs::select(['id', 'title_' . $locale, 'description_' . $locale])
+        $about = About::select(['id', 'title_' . $locale, 'description_' . $locale])
         ->whereNotNull('title_' . $locale)
         ->where('title_' . $locale, '!=', '')
         ->first()
@@ -97,7 +97,7 @@ class CmsController extends Controller
         $values = Value::all();
         $goals = Goal::all();
         $missions = Mission::all();
-        // dd($values);
+        // dd($about);
         return view('cms.about', compact(['about', 'setting', 'contact', 'values', 'goals', 'missions', 'socials']));
     }
     public function blog()

@@ -67,6 +67,16 @@
                 </a>
             </li>
         @endcan
+        @can('about_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.abouts.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/abouts") || request()->is("admin/abouts/*") ? "c-active" : "" }}">
+                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('cruds.about.title') }}
+                </a>
+            </li>
+        @endcan
         @can('social_media_link_access')
             <li class="c-sidebar-nav-item">
                 <a href="{{ route("admin.social-media-links.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/social-media-links") || request()->is("admin/social-media-links/*") ? "c-active" : "" }}">

@@ -41,6 +41,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
     Route::resource('users', 'UsersController');
 
+     // About
+    Route::delete('abouts/destroy', 'AboutController@massDestroy')->name('abouts.massDestroy');
+    Route::post('abouts/media', 'AboutController@storeMedia')->name('abouts.storeMedia');
+    Route::post('abouts/ckmedia', 'AboutController@storeCKEditorImages')->name('abouts.storeCKEditorImages');
+    Route::resource('abouts', 'AboutController');
+    
     // About Us
     Route::delete('aboutuses/destroy', 'AboutUsController@massDestroy')->name('aboutuses.massDestroy');
     Route::post('aboutuses/media', 'AboutUsController@storeMedia')->name('aboutuses.storeMedia');
