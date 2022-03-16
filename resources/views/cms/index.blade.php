@@ -325,6 +325,7 @@
         </div>
     </section>
     <!-- blog section end -->
+    
     <section class="about-page section-b-space">
         <div class="container">
             <div class="row">
@@ -341,28 +342,67 @@
                         </div>
                        </div>
                 </div>
-                @if (App::getLocale() == 'ar')
-                <div class="col-sm-12">
-                    <h4>لماذا عليكم اختيارنا؟</h4>
-                    <h5>&#9832; حلقة الربط وجسر التواصل و التفاهم بين
-                        العملاء وإستثمارتهم</h5>
-                    <h5>&#9832; نقرب وجهات النظر بين المستثمرين</h5>
-                    <h5>&#9832; نحن الحلقة التي تربط أطراف النجاح</h5>
-                    <h5>&#9832; نشارك في تجاوز الصعوبات الإستثمارية</h5>
-                    <h5>&#9832; نعمل على جعل حلم المستثمرين واقعا</h5>
+                <div class="white-layout">
+                    <section class="p-0">
+                        <div class="container-fluid">
+                            <div class="row footer-theme2 section-light footer-border">
+                                <div class="col">
+                                    <div class="footer-block">
+                                        <div class="footer-container">
+                                            <div class="footer-title footer-mobile-title">
+                                                <h4>about</h4>
+                                            </div>
+                                            <div class="footer-contant">
+                                                @if (App::getlocale() == 'ar')
+                                                <img src="/images/why-usar.png" alt="" srcset="" width="300" height="300">
+                                                    
+                                                @else
+                                                <img src="/images/why-us.png" alt="" srcset="" width="300" height="300">
+                                                    
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="footer-block">
+                                        <div class="footer-container">
+                                            <div class="footer-title">
+                                           
+                                            </div>
+                                            <div class="footer-contant">
+                                                <ul class="contact-details">
+                                                    @if (App::getLocale() == 'ar')
+                                                    <div class="col-sm-12">
+                                                        <h4>لماذا عليكم اختيارنا؟</h4>
+                                                        <h5>&#9832; حلقة الربط وجسر التواصل و التفاهم بين
+                                                            العملاء وإستثمارتهم</h5>
+                                                        <h5>&#9832; نقرب وجهات النظر بين المستثمرين</h5>
+                                                        <h5>&#9832; نحن الحلقة التي تربط أطراف النجاح</h5>
+                                                        <h5>&#9832; نشارك في تجاوز الصعوبات الإستثمارية</h5>
+                                                        <h5>&#9832; نعمل على جعل حلم المستثمرين واقعا</h5>
+                                                    </div>
+                                                        
+                                                    @else
+                                                    <div class="col-sm-12">
+                                                        <h4>Why should you choose us?</h4>
+                                                        <h5>&#9832; The linking ring and the bridge of communication and understanding between customers and their investments</h5>
+                                                        <h5>&#9832; We bring the views of investors closer</h5>
+                                                        <h5>&#9832; We are the link that connects the parties to success</h5>
+                                                        <h5>&#9832; We participate in overcoming investment difficulties</h5>
+                                                        <h5>&#9832; We are working to make the dream of investors a reality</h5>
+                                                    </div>
+                                                        
+                                                    @endif
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                    
-                @else
-                <div class="col-sm-12">
-                    <h4>Why should you choose us?</h4>
-                    <h5>&#9832; The linking ring and the bridge of communication and understanding between customers and their investments</h5>
-                    <h5>&#9832; We bring the views of investors closer</h5>
-                    <h5>&#9832; We are the link that connects the parties to success</h5>
-                    <h5>&#9832; We participate in overcoming investment difficulties</h5>
-                    <h5>&#9832; We are working to make the dream of investors a reality</h5>
-                </div>
-                    
-                @endif
             </div>
         </div>
     </section>

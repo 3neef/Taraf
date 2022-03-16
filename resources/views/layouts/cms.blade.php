@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="multikart">
-    <meta name="keywords" content="multikart">
-    <meta name="author" content="multikart">
+    <meta name="description" content="Taraf">
+    <meta name="keywords" content="Taraf">
+    <meta name="author" content="Taraf">
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <title>TARAF</title>
@@ -193,7 +193,7 @@
             document.getElementById("search-overlay").style.display = "none";
         }
     </script>
-
+    <script src=“https://widget-v4.tidiochat.com/1_86_0/static/js/render.27505c09674bbc49ecf7.js” async></script>       
 </body>
 
 </html>

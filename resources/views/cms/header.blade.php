@@ -1,3 +1,24 @@
+<div class="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="header-contact">
+                    <ul>
+                        @if (App::getLocale() == 'ar')
+                        <li>مرحبا بك في طرف</li>
+                        <li><i class="fa fa-phone text-decoration: none; text-black" aria-hidden="true"><span>   اتصل بنا   </span><a href="tel:{{$contact->phone}}" class="rtl"> {{$contact->phone}}</a></i>
+                            
+                        @else
+                            
+                        <li>Welcome to Taraf</li>
+                        <li><i class="fa fa-phone text-decoration: none; text-black" aria-hidden="true"><span>  call us:  </span><a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a></i>
+                        @endif
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <header>
     <div class="mobile-fix-option"></div>
     <div class="container">
