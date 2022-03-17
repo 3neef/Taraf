@@ -68,24 +68,25 @@
     <!-- how to start section start -->
     <section class="section-b-space become-vendor">
         <div class="container">
-            @if (App::getLocale() == 'ar')
+            {{-- @if (App::getLocale() == 'ar')
                 
             <h4>قيم المؤسسة</h4>
             @else
                 
             <h4>Values and goals</h4>
-            @endif
+            @endif --}}
             <div class="step-bg">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="step-box">
                             <div>
+                                <div class="steps"><i class="fa fa-eye" aria-hidden="true"></i></div>
                                 @if (App::getLocale() == 'ar')
-                                <div class="steps">١</div>
+                                
                                 <h4>القيم</h4>
                                 
                                 @else
-                                <div class="steps">1</div>
+                               
                                 <h4>Values</h4>
                                 @endif
                                 @foreach ($values as $value)
@@ -98,12 +99,12 @@
                     <div class="col-lg-4">
                         <div class="step-box">
                             <div>
+                                <div class="steps"><i class="fa fa-compass" aria-hidden="true"></i></div>
                                 @if (App::getLocale() == 'ar')
-                                <div class="steps">٢</div>
+                                
                                 <h4>الاهداف</h4>
                                 
                                 @else
-                                <div class="steps">2</div>
                                 <h4>goals</h4>
                                 @endif
                                 @foreach ($goals as $goal)
@@ -116,12 +117,12 @@
                     <div class="col-lg-4">
                         <div class="step-box">
                             <div>
+                                <div class="steps"><i class="fa fa-bullseye" aria-hidden="true"></i></div>
                                 @if (App::getLocale() == 'ar')
-                                <div class="steps">٣</div>
+                             
                                 <h4>المهام</h4>
                                 
                                 @else
-                                <div class="steps">3</div>
                                 <h4>Missions</h4>
                                 @endif
                                 @foreach ($missions as $mission)

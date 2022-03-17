@@ -113,6 +113,19 @@ class CmsController extends Controller
         $posts = Post::with(['media'])->get();
         return view('cms.blogindex', compact(['posts', 'setting', 'contact', 'socials']));
     }
+    public function contact()
+    {
+        $locale = app()->getLocale();
+        $setting = Setting::select(['id', 'site_name_' . $locale, 'slogan_' . $locale])
+        ->whereNotNull('site_name_' . $locale)
+        ->where('site_name_' . $locale, '!=', '')
+        ->first()
+        ->get();
+        $socials = SocialMediaLink::get();
+        $contact = Contact::first();
+        $posts = Post::with(['media'])->get();
+        return view('cms.contact', compact(['setting', 'contact', 'socials']));
+    }
     public function product()
     {
         $locale = app()->getLocale();

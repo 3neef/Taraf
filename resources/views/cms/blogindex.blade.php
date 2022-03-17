@@ -1,5 +1,31 @@
 @extends('layouts.cms')
 @section('content')
+<div class="breadcrumb-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="page-title">
+                    <h2>Blog</h2>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                    <ol class="breadcrumb">
+                        @if (App::getLocale() == 'ar')
+                        <li class="breadcrumb-item active">مدونة </li>
+                        <li class="breadcrumb-item"><a href="{{route('taraf')}}">الصفحة الرئيسية</a></li>
+                            
+                        @else
+                        <li class="breadcrumb-item"><a href="{{route('taraf')}}">Home</a></li>
+                        <li class="breadcrumb-item active">blog</li>
+                            
+                        @endif
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
         <!-- section start -->
         <section class="section-b-space blog-page ratio2_3">
             <div class="container">

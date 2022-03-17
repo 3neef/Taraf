@@ -3,16 +3,19 @@
 Route::get('/', [\App\Http\Controllers\CmsController::class, 'index'])
         ->name('taraf');
 
-Route::get('/taraf/about', [\App\Http\Controllers\CmsController::class, 'about'])
+Route::get('/about', [\App\Http\Controllers\CmsController::class, 'about'])
         ->name('about');
-Route::get('/taraf/products', [\App\Http\Controllers\CmsController::class, 'product'])
+Route::get('/products', [\App\Http\Controllers\CmsController::class, 'product'])
         ->name('products');
-        Route::get('/taraf/products/{product}', [\App\Http\Controllers\CmsController::class, 'showProduct'])
+        Route::get('/products/{product}', [\App\Http\Controllers\CmsController::class, 'showProduct'])
                 ->name('show.product');
 
-Route::get('/taraf/blog', [\App\Http\Controllers\CmsController::class, 'blog'])
+Route::get('/blog', [\App\Http\Controllers\CmsController::class, 'blog'])
         ->name('blog');
-Route::get('/taraf/post/{post}', [\App\Http\Controllers\CmsController::class, 'show'])
+Route::get('/contact', [\App\Http\Controllers\CmsController::class, 'contact'])
+        ->name('contact');
+
+Route::get('/blog/{post}', [\App\Http\Controllers\CmsController::class, 'show'])
         ->name('show.post');
 
 

@@ -111,7 +111,7 @@
     </div>
 </footer> --}}
 <footer>
-    <div class="white-layout">
+    <div class="bg-color2">
         <section class="p-0">
             <div class="container-fluid">
                 <div class="row footer-theme2 section-light footer-border">
@@ -125,8 +125,8 @@
                                     @foreach ($setting as $setting )
                         <div class="footer-logo">
                             <img src="{{$setting->logo->getUrl()}}" alt="">
+                            <h3>{!! $setting->{'slogan_'.app()->getLocale()} !!}</h3>
                         </div>
-                        <h2>{!! $setting->{'slogan_'.app()->getLocale()} !!}</h2>
                             @endforeach
                                    
                                     <div class="social-white">
@@ -143,7 +143,7 @@
                     <div class="col form-p p-0">
                         <div class="footer-block">
                             <div class="footer-container">
-                               <img src="/images/footer.jpg" alt="" srcset="" width="300" height="300">
+                               <img src="/images/oman.png" alt="" srcset="" width="300" height="300">
                             </div>
                         </div>
                     </div>
@@ -187,15 +187,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="white-layout box-layout">
-        <div class="container">
-            <section class="small-section">
-                <div class="row footer-theme2">
                     <div class="col">
+                        <div class="footer-block">
+                            <div class="footer-container">
                         <div class="footer-link">
                             <div class="footer-title">
                                 @if (App::getLocale() == 'ar')
@@ -212,31 +206,39 @@
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">الرئيسية</a></li>
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">عن المؤسسة</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">المنتجات</a></li>
-                                    <li>
-                                        <a href="{{route('blog','?language='.App::getLocale())}}">مدونة</a>
-    
-                                    </li>
+                                    <li><a href="{{route('blog','?language='.App::getLocale())}}">مدونة</a> </li>
+                                    <li><a href="{{route('contact','?language='.App::getLocale())}}">للتواصل</a> </li>
+                                   
                                     @else
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">Home</a></li>
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">About Us</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">Products</a></li>
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">blog</a></li>
+                                    <li><a href="{{route('contact','?language='.App::getLocale())}}">Contact Us</a></li>
                                     
                                     @endif
                                 </ul>
                             </div>
                         </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
     <div class="sub-footer">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-md-6 col-sm-12">
                     <div class="footer-end">
-                        <p><i class="fa fa-copyright" aria-hidden="true"></i> 2022 powerd by Flix Technology</p>
+                        @if (App::getLocale() == 'ar')
+                        <p>كل الحقوق محفوظة للصالح <span>شركة طرف</span><i class="fa fa-copyright" aria-hidden="true"></i> 2022  <span>&nbsp;&nbsp;</span> طورت بواسطة شركة<a href="https://www.flixtechnology.com/"> Flix Technology</a></p>
+                        
+                        @else
+                        
+                        <p>Copyright<i class="fa fa-copyright" aria-hidden="true"></i> 2022 <span>Taraf</span> <span>&nbsp;&nbsp;</span> Developed by <a href="https://www.flixtechnology.com/"> Flix Technology</a></p>
+                        @endif
                     </div>
                 </div>
             </div>

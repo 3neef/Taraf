@@ -113,7 +113,7 @@
                     <div class="col">
                         @if (App::getLocale() == 'ar')
                         <div class="banner-contain">
-                            <h2>2040</h2>
+                            <h2>٢٠٤٠</h2>
                             <h3>رؤية عمان</h3>
                             {{-- <h4>special offer</h4> --}}
                         </div>
@@ -221,76 +221,143 @@
         </section>
     </div>
     <!-- service layout  end -->
-    <section class="about-page section-b-space">
+    <section class="section-b-space border-section  become-vendor ">
+        <div class="title1 title5">
+            @if (App::getLocale() == 'ar')
+            <h2 class="title-inner1">مسيرتنا</h2>
+                
+            @else
+            <h2 class="title-inner1">Our History</h2>
+                
+            @endif
+            <hr role="tournament6">
+           </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="title4">
-                        @if (App::getLocale() == 'ar')
-                        <h2 class="title-inner4">مسيرتنا </h2>
-                        @else
-                        
-                        <h2 class="title-inner4">Our History</h2>
-                        @endif
-                        <div class="line mb-0">
-                         <span></span>
+            <div class="step-bg">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="step-box">
+                            <div>
+                                @if (App::getLocale() == 'ar')
+                                <div class="steps">٢٠١٤</i></div>
+                                
+                                
+                                <h4>تأسيس الشركة بنشاط النقل
+                                    البري بالشاحنات للبضائع و المعدات</h4> <br>
+                                    
+                                    @else
+                                    <div class="steps">2014</i></div>
+                               
+                                <h4>>Establishment of the company with the activity of road transport by truck of goods and equipment</h4>
+                                @endif
+                                
+                                    
+                                
+                            </div>
                         </div>
-                       </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="step-box">
+                            <div>
+                                @if (App::getLocale() == 'ar')
+                                <div class="steps">۲۰۱٦</i></div>
+                                
+                                <h4>توزيع المياة المعدنية المعبأة</h4>
+                                
+                                @else
+                                <div class="steps">2016</i></div>
+                                <h4>Bottled mineral water distribution</h4>
+                                @endif
+                               
+                                    
+                              
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="step-box">
+                            <div>
+                                @if (App::getLocale() == 'ar')
+                                <div class="steps">۲۰۱۷</i></div>
+                                
+                                <h4>إضافة نشاط الوساطة التجارية</h4>
+                                
+                                @else
+                                <div class="steps">2017</i></div>
+                                <h4>We Added a commercial brokerage activity</h4>
+                                @endif
+                              
+                                    
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-lg-6">
+                        <div class="step-box">
+                            <div>
+                                @if (App::getLocale() == 'ar')
+                                <div class="steps">۲۰۱۹</i></div>
+                                
+                                <h4>التوقف الكلي عن توزيع المياة المعدنية
+                                    التوسع في نشاط السمسرة التجارية</h4>
+                                    
+                                @else
+                                    <div class="steps">2019</i></div>
+                                <h4>Total cessation of mineral water distribution Expansion of commercial brokerage activity</h4>
+                                @endif
+                              
+                                    
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="step-box">
+                            <div>
+                                @if (App::getLocale() == 'ar')
+                                <div class="steps">۲۰۲۲</i></div>
+                                
+                                <h4>ومازلنا مستمرين بقوة</h4>
+                                
+                                @else
+                                <div class="steps">2022</i></div>
+                                <h4>And we're still going strong</h4>
+                                @endif
+                              
+                                    
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                @if (App::getLocale() == 'ar')
-                <div class="col-sm-12">
-                    <h3>&#9839; 2014</h2>
-                    <h4>تأسيس الشركة بنشاط النقل
-                        البري بالشاحنات للبضائع و المعدات</h4>
-                        <h3>&#9839; 2016</h3>
-                        <h4>توزيع المياة المعدنية المعبأة</h4>
-                        <h3>&#9839; 2017</h3>
-                        <h4>إضافة نشاط الوساطة التجارية</h4>
-                        <h3>&#9839; 2019</h3>
-                        <h4>التوقف الكلي عن توزيع المياة المعدنية
-                            التوسع في نشاط السمسرة التجارية</h4>
-                            <h3>&#9839; 2022</h3>
-                            <h4>ومازلنا مستمرين بقوة</h4>
-                </div>
-                    
-                @else
-                <div class="col-sm-12">
-                    <h3>&#9839; 2014</h2>
-                    <h4>Establishment of the company with the activity of road transport by truck of goods and equipment</h4>
-                        <h3>&#9839; 2016</h3>
-                        <h4>Bottled mineral water distribution</h4>
-                        <h3>&#9839; 2017</h3>
-                        <h4>Add a commercial brokerage activity</h4>
-                        <h3>&#9839; 2019</h3>
-                        <h4>Total cessation of mineral water distribution Expansion of commercial brokerage activity</h4>
-                            <h3>&#9839; 2022</h3>
-                            <h4>And we're still going strong</h4>
-                </div>
-                    
-                @endif
             </div>
         </div>
     </section>
 
     <!-- blog section -->
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="title1 section-t-space">
-                    @if (App::getLocale() == 'ar')
-                    {{-- <h4></h4> --}}
-                    <h2 class="title-inner1">من المدونة</h2>
+    <section class="blog pt-0 ratio2_3 border-section  ">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title1 section-t-space">
+                        @if (App::getLocale() == 'ar')
+                        {{-- <h4></h4> --}}
+                        <h2 class="title-inner1"> المدونة</h2>
+                            
+                        @else
                         
-                    @else
-                    
-                    {{-- <h4></h4> --}}
-                    <h2 class="title-inner1">From the Blog</h2>
-                    @endif
+                        {{-- <h4></h4> --}}
+                        <h2 class="title-inner1">the Blog</h2>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <section class="blog pt-0 ratio2_3">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -326,7 +393,7 @@
     </section>
     <!-- blog section end -->
     
-    <section class="about-page section-b-space">
+    <section class="about-page section-b-space border-section ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -408,7 +475,7 @@
     </section>
 
     <!-- instagram section -->
-    <section class="instagram ratio_square">
+    <section class="instagram ratio_square border-section ">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 p-0">
@@ -445,7 +512,7 @@
 
 
     <!--  logo section -->
-    <section class="section-b-space">
+    <section class="section-b-space border-section ">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
