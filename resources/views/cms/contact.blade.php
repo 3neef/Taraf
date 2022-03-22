@@ -7,7 +7,14 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="page-title">
+                    @if (App::getLocale() == 'ar')
+                    <h2>للتواصل</h2>
+                    
+                        
+                    @else
                     <h2>contact</h2>
+                        
+                    @endif
                 </div>
             </div>
             <div class="col-sm-6">

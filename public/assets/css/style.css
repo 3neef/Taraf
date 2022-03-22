@@ -425,6 +425,9 @@ hr.style1 {
 
 .bg-color2 {
   background-color: #f7dc71; }
+  
+.dark .bg-color2 {
+  background-color: #000000; }
 
 .bg-color3 {
   background-color: #6d6d6d; }
