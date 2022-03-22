@@ -36,7 +36,7 @@ class CmsController extends Controller
 
         $socials = SocialMediaLink::get();
         // products query\
-        $products = Product::with(['category', 'media'])->get();
+        $products = Product::with(['category', 'media'])->limit(5)->get();
         // $products = Product::select(['id', 'name_' . $locale, 'description_' . $locale, 'price'])
         // ->with(['category', 'media'])
         // ->whereNotNull('name_' . $locale)
@@ -169,7 +169,9 @@ class CmsController extends Controller
         $socials = SocialMediaLink::get();
         $contact = Contact::first();
         
-        return view('cms.product', compact(['product', 'setting', 'contact', 'socials']));
+        $products = Product::with([ 'media'])->where('category_id', $product->category_id)->where('id','!=', $product->id)->get();
+        // dd($products);
+        return view('cms.product', compact(['product', 'setting', 'contact', 'socials', 'products']));
     }
 
 }

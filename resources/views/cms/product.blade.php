@@ -84,5 +84,42 @@
         </div>
     </div>
 </section>
+<section class="section-b-space ratio_asos">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 product-related">
+                <h2>related products</h2>
+            </div>
+        </div>
+        <div class="row search-product">
+            @foreach ($products as $product)
+                
+            
+            <div class="col-xl-2 col-md-4 col-6">
+                <div class="product-box">
+                    <div class="img-wrapper">
+                        @foreach ($product->images as $key => $media)
+                        <div class="front">
+                            <a href="#"><img src="{{ $media->getUrl() }}"
+                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                        </div>
+                        <div class="back">
+                            <a href="#"><img src="{{ $media->getUrl() }}"
+                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                        </div>
+                        @endforeach
+                    </div>
+                    <div class="product-detail">
+                        <a href="product-page(no-sidebar).html">
+                            <h6>{{$product->{'name_'.app()->getLocale() } }}</h6>
+                        </a>
+                        <h4>${{$product->price}}</h4>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
 
 @endsection

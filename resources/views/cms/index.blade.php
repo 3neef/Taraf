@@ -158,10 +158,10 @@
                             
                         </ul>
                         <div class="tab-content-cls">
-                            @foreach ($products as $product)
-                            <div id="tab-{{$product->category->id}}" class="tab-content ">
+                            @foreach ($categories as $category)
+                            <div id="tab-{{$category->id}}" class="tab-content ">
                                 <div class="no-slider row">
-                                    {{-- @foreach ($category->products as $product ) --}}
+                                    @foreach ($category->products as $product )
                                     <div class="product-box">
                                         <div class="img-wrapper">
                                             @foreach ($product->images as $key => $media)
@@ -186,7 +186,7 @@
                                             <h4>${{$product->price}}</h4>
                                         </div>
                                     </div>
-                                    {{-- @endforeach --}}
+                                    @endforeach
                                 </div>
                             </div>                                
                             @endforeach
@@ -397,17 +397,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="title4">
+                    <div class="title1 section-t-space">
                         @if (App::getLocale() == 'ar')
-                        <h2 class="title-inner4">لماذا نحن</h2>
+                        <h2 class="title-inner1">لماذا نحن</h2>
                         @else
                         
-                        <h2 class="title-inner4">Why Us</h2>
+                        <h2 class="title-inner1">Why Us</h2>
                         @endif
-                        <div class="line mb-0">
-                         <span></span>
-                        </div>
-                       </div>
+                       
+                    </div>
                 </div>
                 <div class="white-layout">
                     <section class="p-0">
@@ -479,13 +477,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 p-0">
-                    @if (App::getLocale() == 'ar')
-                    
-                    <h2 class="title-borderless">استوديو الصور</h2>
-                    @else
-                    <h2 class="title-borderless">Our Gallery</h2>
+                    <div class="title1 section-t-space">
+                        @if (App::getLocale() == 'ar')
+                        {{-- <h4></h4> --}}
+                        <h2 class="title-inner1"> استوديو الصور</h2>
+                            
+                        @else
                         
-                    @endif
+                        {{-- <h4></h4> --}}
+                        <h2 class="title-inner1">Our Gallery</h2>
+                        @endif
+                    </div>
                     <div class="slide-7 no-arrow slick-instagram">
                         @foreach ($galleries as $gallery)
                 
@@ -516,14 +518,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    @if (App::getLocale() == 'ar')
-                    
-                    <h2 class="title-borderless">عملائنا</h2>
-                    @else
-                    <h2 class="title-borderless">Our Clients</h2>
+                    <div class="title1 section-t-space">
+                        @if (App::getLocale() == 'ar')
+                        {{-- <h4></h4> --}}
+                        <h2 class="title-inner1"> عملائنا</h2>
+                            
+                        @else
                         
-                    @endif
-                    <div class="slide-6 no-arrow">
+                        {{-- <h4></h4> --}}
+                        <h2 class="title-inner1">Our Clients</h2>
+                        @endif
+                    </div>
+                    <div class="slide-6 ">
                         @foreach ($clients as $client)
                             
                         @if ($client->is_partner == 'no')
@@ -549,13 +555,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    @if (App::getLocale() == 'ar')
-                    
-                    <h2 class="title-borderless">شركائنا</h2>
-                    @else
-                    <h2 class="title-borderless">Our Partners</h2>
+                    <div class="title1 section-t-space">
+                        @if (App::getLocale() == 'ar')
+                        {{-- <h4></h4> --}}
+                        <h2 class="title-inner1"> شركائنا</h2>
+                            
+                        @else
                         
-                    @endif
+                        {{-- <h4></h4> --}}
+                        <h2 class="title-inner1">Our Partners</h2>
+                        @endif
+                    </div>
+
                     <div class="slide-6 no-arrow">
                         @foreach ($clients as $client)
                             @if ($client->is_partner == 'yes')
