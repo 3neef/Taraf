@@ -114,7 +114,7 @@
     <div class="bg-color2">
         <section class="p-0">
             <div class="container-fluid">
-                <div class="row footer-theme2 section-light footer-border">
+                <div class="row footer-theme2 section-light footer-border custom-footer">
                     <div class="col">
                         <div class="footer-block">
                             <div class="footer-container">
@@ -129,13 +129,7 @@
                         </div>
                             @endforeach
                                    
-                                    <div class="social-white">
-                                        <ul>
-                                            @foreach ($socials as $link)
-                                            <li><a href="{{$link->url}}"><i class="fa fa-{{ $link->name}}" aria-hidden="true"></i></a></li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -147,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col coool">
                         <div class="footer-block">
                             <div class="footer-container">
                                 <div class="footer-title">
@@ -187,7 +181,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col coool">
                         <div class="footer-block">
                             <div class="footer-container">
                         <div class="footer-link">
@@ -218,6 +212,13 @@
                                     
                                     @endif
                                 </ul>
+                                <div class="social-white">
+                                    <ul>
+                                        @foreach ($socials as $link)
+                                        <li><a href="{{$link->url}}"><i class="fa fa-{{ $link->name}}" aria-hidden="true"></i></a></li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                             </div>

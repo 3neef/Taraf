@@ -54,10 +54,10 @@
                 <div class="product-para">
                     @if (App::getLocale() == 'ar')
                         
-                    <p class="text-center">اجود و احدث المنتجات</p>
+                    <h4 class="text-center">اجود و احدث المنتجات</h4>
                     @else
                         
-                    <p class="text-center">the best products with the best prices</p>
+                    <h4 class="text-center">the best products with the best prices</h4>
                     @endif
                 </div>
             </div>
@@ -73,26 +73,43 @@
                 <div class="col">
                     <div class="product-4 product-m no-arrow">
                         @foreach ($products as $product )
-                        <div class="product-box">
+                        <div class="product-box product-wrap">
                             <div class="img-wrapper">
-                                @foreach ($product->images as  $media)
-                                @if ($media)
-                                    <div class="front">
-                                    <a href="{{route('show.product', $product)}}"><img src="{{ $media->getUrl() }}"
-                                                class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                                    </div>
-                                    <div class="back">
-                                        <a href="{{route('show.product', $product)}}"><img src="{{ $media->getUrl() }}"
-                                                class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                                    </div>
-                                @endif
+                                @foreach ($product->images as $key => $media)
+                                <div class="front">
+                                    <a href="{{route('show.product', $product)}}">
+                                        <img alt="" src="{{ $media->getUrl() }}"
+                                            class="img-fluid blur-up lazyload bg-img">
+                                    </a>
+                                </div>
+                                <div class="back">
+                                    <a href="{{route('show.product', $product)}}">
+                                        <img alt="" src="{{ $media->getUrl() }}"
+                                            class="img-fluid blur-up lazyload bg-img">
+                                    </a>
+                                </div>
                                 @endforeach
                             </div>
-                            <div class="product-detail">
+                            <div class="product-info">
                                 <a href="{{route('show.product', $product)}}">
-                                    <h6>{{ $product->{'name_'.app()->getLocale()} }}</h6>
+                                    <h3>{{ $product->{'name_'.app()->getLocale()} }}</h3>
                                 </a>
                                 <h4>${{$product->price}}</h4>
+                                <div class="add-btn">
+                                    <a href="{{route('show.product', $product)}}"
+                                        class="btn btn-outline">
+                                        <i class="ti-shopping-cart"></i>
+                                        @if (App::getLocale() == 'ar')
+                                        
+                                        تفاصيل المنتج
+                                            
+                                        @else
+                                        
+                                        Product details
+                                        
+                                        @endif
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         @endforeach
@@ -152,20 +169,26 @@
                 <div class="col">
                     <div class="theme-tab">
                         <ul class="tabs tab-title">
+                            <li class="current"><a href="tab-1">
+                                @if (App::getLocale() == 'ar')
+                                الكل
+                                @else
+                                All
+                                @endif
+                                
+                            </a></li>
                             @foreach ($categories as $category)
-                            <li class="current"><a href="tab-{{$category->id}}">{{ $category->{'name_'.app()->getLocale() } }}</a></li>    
+                            <li><a href="tab-{{$category->id + 1}}">{{ $category->{'name_'.app()->getLocale() } }}</a></li>    
                             @endforeach
                             
                         </ul>
                         <div class="tab-content-cls">
-                            @foreach ($categories as $category)
-                            <div id="tab-{{$category->id}}" class="tab-content ">
+                            <div id="tab-1" class="tab-content">
                                 <div class="no-slider row">
-                                    @foreach ($category->products as $product )
+                                    @foreach ($products as $product )
                                     <div class="product-box">
                                         <div class="img-wrapper">
                                             @foreach ($product->images as $key => $media)
-                                                
                                             <div class="front">
                                                 <a href="{{route('show.product', $product)}}"><img
                                                     src="{{ $media->getUrl() }}"
@@ -179,11 +202,71 @@
                                                 </div>
                                             @endforeach
                                         </div>
-                                        <div class="product-detail">
+                                        <div class="product-info">
                                             <a href="{{route('show.product', $product)}}">
-                                                <h6>{{ $product->{'name_'.app()->getLocale()} }}</h6>
+                                                <h3>{{ $product->{'name_'.app()->getLocale()} }}</h3>
                                             </a>
                                             <h4>${{$product->price}}</h4>
+                                            <div class="add-btn">
+                                                <a href="{{route('show.product', $product)}}"
+                                                    class="btn btn-outline">
+                                                    <i class="ti-shopping-cart"></i>
+                                                    @if (App::getLocale() == 'ar')
+                                                    
+                                                    تفاصيل المنتج
+                                                        
+                                                    @else
+                                                    
+                                                    Product details
+                                                    
+                                                    @endif
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            @foreach ($categories as $category)
+                            <div id="tab-{{$category->id + 1}}" class="tab-content ">
+                                <div class="no-slider row">
+                                    @foreach ($category->products as $product )
+                                    <div class="product-box">
+                                        <div class="img-wrapper">
+                                            @foreach ($product->images as $key => $media)
+                                            <div class="front">
+                                                <a href="{{route('show.product', $product)}}"><img
+                                                    src="{{ $media->getUrl() }}"
+                                                    class="img-fluid blur-up lazyload bg-img" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="back">
+                                                <a href="{{route('show.product', $product)}}"><img
+                                                    src="{{ $media->getUrl() }}"
+                                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <div class="product-info">
+                                            <a href="{{route('show.product', $product)}}">
+                                                <h3>{{ $product->{'name_'.app()->getLocale()} }}</h3>
+                                            </a>
+                                            <h4>${{$product->price}}</h4>
+                                            <div class="add-btn">
+                                                <a href="{{route('show.product', $product)}}"
+                                                    class="btn btn-outline">
+                                                    <i class="ti-shopping-cart"></i>
+                                                    @if (App::getLocale() == 'ar')
+                                                    
+                                                    تفاصيل المنتج
+                                                        
+                                                    @else
+                                                    
+                                                    Product details
+                                                    
+                                                    @endif
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                     @endforeach
@@ -248,7 +331,7 @@
                                     @else
                                     <div class="steps">2014</i></div>
                                
-                                <h4>>Establishment of the company with the activity of road transport by truck of goods and equipment</h4>
+                                <h4>Establishment of the company with the activity of road transport by truck of goods and equipment</h4>
                                 @endif
                                 
                                     
@@ -536,7 +619,7 @@
                                 
                         <div>
                             <div class="logo-block">
-                                <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" width="320" height="100"></a>
+                                <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" style="height: 100px; width: auto;"></a>
                             </div>
                         </div>
                     
@@ -573,7 +656,7 @@
                                 
                             <div>
                                 <div class="logo-block">
-                                    <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" width="250" height="100"></a>
+                                    <a href="#"><img src="{{ $client->logo->getUrl() }}" alt="" style="height: 100px; width: auto;"></a>
                                 </div>
                             </div>
                         

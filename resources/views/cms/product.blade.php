@@ -51,10 +51,6 @@
                             <div class="col-lg-6 rtl-text">
                                 <div class="product-right pro_sticky_info" data-sticky_column>
                                     <h2>{{$product->{'name_'.app()->getLocale() } }}</h2>
-                                    <div class="label-section">
-                                        <span class="badge badge-grey-color">Best seller</span>
-                                        
-                                    </div>
                                     <h3 class="price-detail">${{$product->price}}</h3>
                                     
                                     <div id="selectSize"
