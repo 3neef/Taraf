@@ -94,7 +94,7 @@
                                 <a href="{{route('show.product', $product)}}">
                                     <h3>{{ $product->{'name_'.app()->getLocale()} }}</h3>
                                 </a>
-                                <h4>${{$product->price}}</h4>
+                                <h4>{{$product->price}}</h4>
                                 <div class="add-btn">
                                     <a href="{{route('show.product', $product)}}"
                                         class="btn btn-outline">
@@ -206,7 +206,7 @@
                                             <a href="{{route('show.product', $product)}}">
                                                 <h3>{{ $product->{'name_'.app()->getLocale()} }}</h3>
                                             </a>
-                                            <h4>${{$product->price}}</h4>
+                                            <h4>{{$product->price}}</h4>
                                             <div class="add-btn">
                                                 <a href="{{route('show.product', $product)}}"
                                                     class="btn btn-outline">
@@ -251,7 +251,7 @@
                                             <a href="{{route('show.product', $product)}}">
                                                 <h3>{{ $product->{'name_'.app()->getLocale()} }}</h3>
                                             </a>
-                                            <h4>${{$product->price}}</h4>
+                                            <h4>{{$product->price}}</h4>
                                             <div class="add-btn">
                                                 <a href="{{route('show.product', $product)}}"
                                                     class="btn btn-outline">

@@ -51,7 +51,7 @@
                             <div class="col-lg-6 rtl-text">
                                 <div class="product-right pro_sticky_info" data-sticky_column>
                                     <h2>{{$product->{'name_'.app()->getLocale() } }}</h2>
-                                    <h3 class="price-detail">${{$product->price}}</h3>
+                                    <h3 class="price-detail">{{$product->price}}</h3>
                                     
                                     <div id="selectSize"
                                         class="addeffect-section product-description border-product">
@@ -59,14 +59,22 @@
                                             {!! $product->{'description_'.app()->getLocale() } !!}</span></h6>
                                     </div>
                                     <div class="border-product">
-                                        <h6 class="product-title">share it</h6>
+                                        <h6 class="product-title">
+                                            @if (App::getlocale() == 'ar')
+                                            شارك المنتج
+                                                
+                                            @else
+                                                
+                                            share it
+                                            @endif
+                                            
+
+                                        </h6>
                                         <div class="product-icon">
                                             <ul class="product-social">
                                                 <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://taraf.flixtechnology.com/products/"."{{$product->id}}"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -84,7 +92,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12 product-related">
+                @if (App::getlocale() == 'ar')
+                <h2>منتجات مشابهة</h2>
+                    
+                @else
+                    
                 <h2>related products</h2>
+                @endif
             </div>
         </div>
         <div class="row search-product">
@@ -96,20 +110,20 @@
                     <div class="img-wrapper">
                         @foreach ($product->images as $key => $media)
                         <div class="front">
-                            <a href="#"><img src="{{ $media->getUrl() }}"
+                            <a href="{{route('show.product', $product)}}"><img src="{{ $media->getUrl() }}"
                                     class="img-fluid blur-up lazyload bg-img" alt=""></a>
                         </div>
                         <div class="back">
-                            <a href="#"><img src="{{ $media->getUrl() }}"
+                            <a href="{{route('show.product', $product)}}"><img src="{{ $media->getUrl() }}"
                                     class="img-fluid blur-up lazyload bg-img" alt=""></a>
                         </div>
                         @endforeach
                     </div>
                     <div class="product-detail">
                         <a href="product-page(no-sidebar).html">
-                            <h6>{{$product->{'name_'.app()->getLocale() } }}</h6>
+                            <h3>{{$product->{'name_'.app()->getLocale() } }}</h3>
                         </a>
-                        <h4>${{$product->price}}</h4>
+                        <h4>{{$product->price}}</h4>
                     </div>
                 </div>
             </div>
