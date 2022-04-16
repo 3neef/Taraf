@@ -16,6 +16,17 @@
             </a>
         </li>
         @can('about_us_access')
+        <li class="c-sidebar-nav-item">
+            <a href="{{ route("admin.requested-products.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/requested-products") || request()->is("admin/requested-products/*") ? "c-active" : "" }}">
+                <i class="fa fa-line-chart c-sidebar-nav-icon">
+
+                </i>
+                {{ __('Requested Product') }}
+            </a>
+        </li>
+        @endcan
+
+        @can('about_us_access')
         <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }}">
             <a class="c-sidebar-nav-dropdown-toggle" href="#">
                 <i class="fa-fw fas fa-info-circle c-sidebar-nav-icon">

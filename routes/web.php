@@ -3,6 +3,9 @@
 Route::get('/', [\App\Http\Controllers\CmsController::class, 'index'])
         ->name('taraf');
 
+Route::get('/request', [\App\Http\Controllers\CmsController::class, 'requestproduct'])
+        ->name('requestproduct');
+
 Route::get('/about', [\App\Http\Controllers\CmsController::class, 'about'])
         ->name('about');
 Route::get('/products', [\App\Http\Controllers\CmsController::class, 'product'])
@@ -27,6 +30,13 @@ Route::get('/home', function () {
 
     return redirect()->route('admin.home');
 });
+
+ // Requested Product
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], function () {
+
+        Route::delete('requested-products/destroy', 'RequestedProductController@massDestroy')->name('requested-products.massDestroy');
+        Route::resource('requested-products', 'RequestedProductController');
+ });
 
 Auth::routes(['register' => false]);
 

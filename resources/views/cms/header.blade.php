@@ -52,6 +52,13 @@
                         </div>
                       
                     </div>
+                    <div class="menu-left">
+                        <div class="brand-logo">
+                            <a href="{{route('taraf','?language='.App::getLocale())}}"><img src="{{asset('images/logo.png')}}"
+                                    class="img-fluid blur-up lazyload" alt="" width="60" height="50"></a>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>

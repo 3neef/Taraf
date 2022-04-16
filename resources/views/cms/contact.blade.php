@@ -66,6 +66,7 @@
                                  
                                  <p><a href="tel:{{$contact->additional_phone}}"> {{$contact->additional_phone}}</a></p>
                                  @endif
+                                 
                             </div>
                         </li>
                         <li>
@@ -78,7 +79,8 @@
                                 @endif
                             </div>
                             <div class="media-body">
-                                <p>{!! $contact->address !!}</p>
+                                <p>{!! $contact->address !!}</p> <br>
+                                <p>E-post Box: B2052</p>
                             </div>
                         </li>
                         <li>
@@ -92,6 +94,7 @@
                             </div>
                             <div class="media-body">
                                 <p><a href="mailto:{{$contact->email}}">{{$contact->email}}</a></p>
+                                <p><a href="mailto:manager@6araff.com"> Manager : manager@6araff.com</a></p>
                                 
                             </div>
                         </li>
