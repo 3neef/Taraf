@@ -27,6 +27,7 @@
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">عن المؤسسة</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">المنتجات</a></li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">للتواصل</a></li>
+                                    <li><a href="{{route('requestproduct','?language='.App::getLocale())}}">الطلبات</a></li>
                                     <li>
                                         <a href="{{route('blog')}}">مدونة</a>
                                     </li>
@@ -40,6 +41,7 @@
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">About Us</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">Products</a></li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">Contact Us</a></li>
+                                    <li><a href="{{route('requestproduct','?language='.App::getLocale())}}">Requests</a></li>
                                         
                                     <li>
                                         <a href="{{route('blog')}}">blog</a>

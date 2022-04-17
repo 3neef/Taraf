@@ -128,7 +128,6 @@
                             <h3>{!! $setting->{'slogan_'.app()->getLocale()} !!}</h3>
                         </div>
                             @endforeach
-                                   
                                     
                                 </div>
                             </div>
@@ -137,7 +136,7 @@
                     <div class="col form-p p-0">
                         <div class="footer-block">
                             <div class="footer-container">
-                               <img src="/images/oman.png" alt="" srcset="" width="300" height="300">
+                                <img src="/images/oman.png" alt="" srcset="" width="300" height="300">
                             </div>
                         </div>
                     </div>
@@ -167,7 +166,7 @@
                                         <li><i class="fa fa-envelope-o"></i>  راسلنا على : <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
                                         
                                     @else
-                                   
+
                                     <li><i class="fa fa-phone"></i>Call us at: <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
                                     @if ($contact->additional_phone)
                                         
@@ -202,12 +201,13 @@
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">المنتجات</a></li>
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">مدونة</a> </li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">للتواصل</a> </li>
-                                   
+                                    <li><a href="{{route('requestproduct','?language='.App::getLocale())}}">الطلبات</a> </li>
                                     @else
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">Home</a></li>
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">About Us</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">Products</a></li>
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">blog</a></li>
+                                    <li><a href="{{route('requestproduct','?language='.App::getLocale())}}">Requests</a></li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">Contact Us</a></li>
                                     
                                     @endif
