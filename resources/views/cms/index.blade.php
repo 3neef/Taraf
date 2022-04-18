@@ -240,19 +240,25 @@
                                     @foreach ($category->products as $product )
                                     <div class="product-box">
                                         <div class="img-wrapper">
-                                            @foreach ($product->images as $key => $media)
                                             <div class="front">
-                                                <a href="{{route('show.product', $product)}}"><img
+                                                <a href="{{route('show.product', $product)}}">
+                                                    @foreach ($product->images as $key => $media)
+                                                    <img
                                                     src="{{ $media->getUrl() }}"
                                                     class="img-fluid blur-up lazyload bg-img" alt="">
+                                                    @endforeach
                                                 </a>
                                             </div>
                                             <div class="back">
-                                                <a href="{{route('show.product', $product)}}"><img
+                                                <a href="{{route('show.product', $product)}}">
+                                                    @foreach ($product->images as $key => $media)
+                                                    <img
                                                     src="{{ $media->getUrl() }}"
-                                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                                                    class="img-fluid blur-up lazyload bg-img" alt="">
+                                                    @endforeach
+                                                </a>
                                                 </div>
-                                            @endforeach
+                                            
                                         </div>
                                         <div class="product-info">
                                             <a href="{{route('show.product', $product)}}">
@@ -483,84 +489,7 @@
     </section>
     <!-- blog section end -->
     
-    {{-- <section class="about-page section-b-space border-section ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="title1 section-t-space">
-                        @if (App::getLocale() == 'ar')
-                        <h2 class="title-inner1">لماذا نحن</h2>
-                        @else
-                        
-                        <h2 class="title-inner1">Why Us</h2>
-                        @endif
-                       
-                    </div>
-                </div>
-                <div class="white-layout">
-                    <section class="p-0">
-                        <div class="container-fluid">
-                            <div class="row footer-theme2 section-light footer-border">
-                                <div class="col">
-                                    <div class="footer-block">
-                                        <div class="footer-container">
-                                            <div class="footer-title footer-mobile-title">
-                                                <h4>about</h4>
-                                            </div>
-                                            <div class="footer-contant">
-                                                @if (App::getlocale() == 'ar')
-                                                <img src="/images/why-usar.png" alt="" srcset="" width="300" height="300">
-                                                    
-                                                @else
-                                                <img src="/images/why-us.png" alt="" srcset="" width="300" height="300">
-                                                    
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="footer-block">
-                                        <div class="footer-container">
-                                            <div class="footer-title">
-                                           
-                                            </div>
-                                            <div class="footer-contant">
-                                                <ul class="contact-details">
-                                                    @if (App::getLocale() == 'ar')
-                                                    <div class="col-sm-12">
-                                                        <h4>لماذا عليكم اختيارنا؟</h4>
-                                                        <h5>&#9832; حلقة الربط وجسر التواصل و التفاهم بين
-                                                            العملاء وإستثمارتهم</h5>
-                                                        <h5>&#9832; نقرب وجهات النظر بين المستثمرين</h5>
-                                                        <h5>&#9832; نحن الحلقة التي تربط أطراف النجاح</h5>
-                                                        <h5>&#9832; نشارك في تجاوز الصعوبات الإستثمارية</h5>
-                                                        <h5>&#9832; نعمل على جعل حلم المستثمرين واقعا</h5>
-                                                    </div>
-                                                        
-                                                    @else
-                                                    <div class="col-sm-12">
-                                                        <h4>Why should you choose us?</h4>
-                                                        <h5>&#9832; The linking ring and the bridge of communication and understanding between customers and their investments</h5>
-                                                        <h5>&#9832; We bring the views of investors closer</h5>
-                                                        <h5>&#9832; We are the link that connects the parties to success</h5>
-                                                        <h5>&#9832; We participate in overcoming investment difficulties</h5>
-                                                        <h5>&#9832; We are working to make the dream of investors a reality</h5>
-                                                    </div>
-                                                        
-                                                    @endif
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </section> --}}
+    {{-- why us section --}}
     <section class="section-b-space beauty-about">
         <div class="container">
             <div class="row">
