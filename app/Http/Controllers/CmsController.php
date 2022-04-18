@@ -36,7 +36,7 @@ class CmsController extends Controller
 
         $socials = SocialMediaLink::get();
         // products query\
-        $products = Product::with(['category', 'media'])->limit(5)->get();
+        $products = Product::select(['id', 'name_' . $locale, 'description_' . $locale, 'price'])->limit(5)->get();
         // $products = Product::select(['id', 'name_' . $locale, 'description_' . $locale, 'price'])
         // ->with(['category', 'media'])
         // ->whereNotNull('name_' . $locale)
@@ -68,7 +68,7 @@ class CmsController extends Controller
         // App::setLocale('ar');
 
         // dd($socials);
-        // dd($products);
+        // dd($posts);
         return view('cms.index',
         compact(['setting', 'products', 'categories', 'services', 'posts', 'galleries', 'clients','contact', 'socials']));
         

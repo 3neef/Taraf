@@ -41,12 +41,14 @@
                         <div class="row blog-media">
                             <div class="col-xl-6">
                                 <div class="blog-left">
-                                    @foreach ($post->image as $media)
                                     
-                                    <a href="{{route('show.post', $post)}}"><img src="{{$media->getUrl()}}"
-                                            class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                                    <a href="{{route('show.post', $post)}}">
+                                        @foreach ($post->image as $media)
+                                        <img src="{{$media->getUrl()}}"
+                                            class="img-fluid blur-up lazyload bg-img" alt="">
+                                            @endforeach
+                                        </a>
                                         
-                                    @endforeach
                                 </div>
                             </div>
                             <div class="col-xl-6">

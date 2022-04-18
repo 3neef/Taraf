@@ -75,20 +75,22 @@
                         @foreach ($products as $product )
                         <div class="product-box product-wrap">
                             <div class="img-wrapper">
-                                @foreach ($product->images as $key => $media)
                                 <div class="front">
                                     <a href="{{route('show.product', $product)}}">
-                                        <img alt="" src="{{ $media->getUrl() }}"
+                                        @foreach ($product->images as $media)
+                                        <img alt="" src="{{$media->getUrl()}}"
                                             class="img-fluid blur-up lazyload bg-img">
+                                            @endforeach
                                     </a>
                                 </div>
                                 <div class="back">
                                     <a href="{{route('show.product', $product)}}">
+                                        @foreach ($product->images as $media)
                                         <img alt="" src="{{ $media->getUrl() }}"
                                             class="img-fluid blur-up lazyload bg-img">
+                                            @endforeach
                                     </a>
                                 </div>
-                                @endforeach
                             </div>
                             <div class="product-info">
                                 <a href="{{route('show.product', $product)}}">
@@ -188,19 +190,24 @@
                                     @foreach ($products as $product )
                                     <div class="product-box">
                                         <div class="img-wrapper">
-                                            @foreach ($product->images as $key => $media)
                                             <div class="front">
-                                                <a href="{{route('show.product', $product)}}"><img
+                                                <a href="{{route('show.product', $product)}}">
+                                                    @foreach ($product->images as $key => $media)
+                                                    <img
                                                     src="{{ $media->getUrl() }}"
                                                     class="img-fluid blur-up lazyload bg-img" alt="">
+                                                    @endforeach
                                                 </a>
                                             </div>
                                             <div class="back">
-                                                <a href="{{route('show.product', $product)}}"><img
+                                                <a href="{{route('show.product', $product)}}">
+                                                    @foreach ($product->images as $key => $media)
+                                                    <img
                                                     src="{{ $media->getUrl() }}"
-                                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                                                    class="img-fluid blur-up lazyload bg-img" alt="">
+                                                    @endforeach
+                                                </a>
                                                 </div>
-                                            @endforeach
                                         </div>
                                         <div class="product-info">
                                             <a href="{{route('show.product', $product)}}">
