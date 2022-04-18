@@ -26055,3 +26055,7 @@ body.rtl .account-setting {
 .coool{
   margin-top: 40px ;
 }
+.tran{
+  -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}

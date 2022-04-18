@@ -2,7 +2,7 @@
 @section('content')
      <!-- Home slider -->
      <section class="p-0">
-        <div class="slide-1 home-slider">
+        <div class="slide-1 no-arrow home-slider">
             @foreach ($galleries as $gallery)
             @if ($gallery->is_sliderable == 'yes')
            
@@ -71,7 +71,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="product-4 product-m no-arrow">
+                    <div class="product-4 product-m no-arrow tran">
                         @foreach ($products as $product )
                         <div class="product-box product-wrap">
                             <div class="img-wrapper">
