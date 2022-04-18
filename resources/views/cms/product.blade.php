@@ -79,7 +79,16 @@
                                         </div>
                                     </div>
                                     <div class="product-buttons"><a href="{{route('requestproduct', $product)}}" class="btn btn-solid"><i
-                                            class="fa fa-shopping-cart me-1" aria-hidden="true"></i>Request product</a></div>
+                                            class="fa fa-shopping-cart me-1" aria-hidden="true"></i>
+                                            @if (App::getlocale() == 'ar')
+                                            طلب المنتج                                                
+                                            @else
+                                                
+                                            
+                                            Request product
+                                            @endif
+                                        </a>
+                                    </div>
                                     </div>
                                 </div>
                             </div>

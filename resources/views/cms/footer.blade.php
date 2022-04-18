@@ -201,13 +201,11 @@
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">المنتجات</a></li>
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">مدونة</a> </li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">للتواصل</a> </li>
-                                    <li><a href="{{route('requestproduct','?language='.App::getLocale())}}">الطلبات</a> </li>
                                     @else
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">Home</a></li>
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">About Us</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">Products</a></li>
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">blog</a></li>
-                                    <li><a href="{{route('requestproduct','?language='.App::getLocale())}}">Requests</a></li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">Contact Us</a></li>
                                     
                                     @endif
