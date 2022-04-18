@@ -27,6 +27,15 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
+                <div class="title3">
+                    @if (App::getLocale() == 'ar')
+                    <h4>طلب شراء</h4>
+                    @else
+                    <h4>Ordering</h4>
+                    @endif
+                    <h2 class="title-inner3">{{$product->{'name_'.app()->getLocale() } }}</h2>
+                    <div class="line"></div>
+                </div>
                 <form method="POST" action="{{ route("admin.requested-products.store") }}" enctype="multipart/form-data" class="theme-form">
                     @csrf
 
@@ -53,8 +62,7 @@
                             <input type="text" class="form-control" name="email" id="email" placeholder="البريد الإلكتروني" required="">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="product">المنتج المطلوب</label>
-                            <input type="text" class="form-control" name="product" id="product" placeholder="المنتج " value="{{$product->{'name_'.app()->getLocale() } }}" required="">
+                            <input type="text" class="form-control" name="product" id="product" placeholder="المنتج " value="{{$product->{'name_'.app()->getLocale() } }}" required="" hidden>
                         </div>
                         <div class="col-md-12 form-group">
                             <button class="btn btn-solid" type="submit">أرسل طلبك</button>
@@ -82,8 +90,7 @@
                             <input type="text" class="form-control" name="email" id="email" placeholder="Email" required="">
                         </div>
                         <div class="col-md-6 form-group">
-                            <label for="product">Product</label>
-                            <input type="text" class="form-control" name="product" id="product" placeholder="{{$product->{'name_'.app()->getLocale() } }}" value="{{$product->{'name_'.app()->getLocale() } }}" required="">
+                            <input type="text" class="form-control" name="product" id="product" placeholder="{{$product->{'name_'.app()->getLocale() } }}" value="{{$product->{'name_'.app()->getLocale() } }}" required="" hidden>
                         </div>
                         <div class="col-md-12 form-group">
                             <button class="btn btn-solid" type="submit">Send Your Request</button>

@@ -119,16 +119,22 @@
             <div class="col-xl-2 col-md-4 col-6">
                 <div class="product-box">
                     <div class="img-wrapper">
-                        @foreach ($product->images as $key => $media)
                         <div class="front">
-                            <a href="{{route('show.product', $product)}}"><img src="{{ $media->getUrl() }}"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                            <a href="{{route('show.product', $product)}}">
+                                @foreach ($product->images as $key => $media)
+                                <img src="{{ $media->getUrl() }}"
+                                    class="img-fluid blur-up lazyload bg-img" alt="">
+                                @endforeach
+                                </a>
                         </div>
                         <div class="back">
-                            <a href="{{route('show.product', $product)}}"><img src="{{ $media->getUrl() }}"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                            <a href="{{route('show.product', $product)}}">
+                                @foreach ($product->images as $key => $media)
+                                <img src="{{ $media->getUrl() }}"
+                                    class="img-fluid blur-up lazyload bg-img" alt="">
+                                    @endforeach
+                                </a>
                         </div>
-                        @endforeach
                     </div>
                     <div class="product-detail">
                         <a href="product-page(no-sidebar).html">
