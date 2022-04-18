@@ -174,7 +174,7 @@ class CmsController extends Controller
         return view('cms.product', compact(['product', 'setting', 'contact', 'socials', 'products']));
     }
 
-    public function requestproduct()
+    public function requestproduct(Product $product)
     {
         $locale = app()->getLocale();
         $setting = Setting::select(['id', 'site_name_' . $locale, 'slogan_' . $locale])
@@ -184,7 +184,7 @@ class CmsController extends Controller
         ->get();
         $socials = SocialMediaLink::get();
         $contact = Contact::first();
-        return view('cms.request', compact(['setting', 'contact', 'socials']));
+        return view('cms.request', compact(['product','setting', 'contact', 'socials']));
     }
 
 }

@@ -3,7 +3,7 @@
 Route::get('/', [\App\Http\Controllers\CmsController::class, 'index'])
         ->name('taraf');
 
-Route::get('/request', [\App\Http\Controllers\CmsController::class, 'requestproduct'])
+Route::get('/request/{product}', [\App\Http\Controllers\CmsController::class, 'requestproduct'])
         ->name('requestproduct');
 
 Route::get('/about', [\App\Http\Controllers\CmsController::class, 'about'])

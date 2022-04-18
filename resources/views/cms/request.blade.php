@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="product">المنتج المطلوب</label>
-                            <input type="text" class="form-control" name="product" id="product" placeholder="المنتج " required="">
+                            <input type="text" class="form-control" name="product" id="product" placeholder="المنتج " value="{{$product->{'name_'.app()->getLocale() } }}" required="">
                         </div>
                         <div class="col-md-12 form-group">
                             <button class="btn btn-solid" type="submit">أرسل طلبك</button>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="product">Product</label>
-                            <input type="text" class="form-control" name="product" id="product" placeholder="request product" required="">
+                            <input type="text" class="form-control" name="product" id="product" placeholder="{{$product->{'name_'.app()->getLocale() } }}" value="{{$product->{'name_'.app()->getLocale() } }}" required="">
                         </div>
                         <div class="col-md-12 form-group">
                             <button class="btn btn-solid" type="submit">Send Your Request</button>
