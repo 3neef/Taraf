@@ -26059,3 +26059,28 @@ body.rtl .account-setting {
   -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
 }
+.me {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 767px) {
+  .mob {
+    display: none;
+  }
+}
+
+@media (max-width:  992px) {
+  .pa {
+    text-align: center !important;
+  }
+  
+  .pc {
+    margin-inline: 1em;
+  }
+  
+}
+@media (max-width: 992px) {
+  .tot {
+    display: none;
+  }
+}

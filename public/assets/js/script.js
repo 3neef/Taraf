@@ -393,15 +393,26 @@
 
     $('.slide-2').slick({
         infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
         responsive: [{
-            breakpoint: 991,
+            breakpoint: 1200,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
-        }]
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
     });
 
     $('.slide-3').slick({

@@ -2,7 +2,7 @@
     <div class="bg-color2">
         <section class="p-0">
             <div class="container-fluid">
-                <div class="row footer-theme2 section-light footer-border custom-footer">
+                <div class="row footer-theme2 section-light footer-border custom-footer ">
                     <div class="col">
                         <div class="footer-block">
                             <div class="footer-container">
@@ -11,20 +11,29 @@
                                 </div>
                                 <div class="footer-contant">
                                     @foreach ($setting as $setting )
-                        <div class="footer-logo">
-                            <img src="{{$setting->logo->getUrl()}}" alt="">
-                            <h3>{!! $setting->{'slogan_'.app()->getLocale()} !!}</h3>
-                        </div>
+                            <div class="footer-logo pa">
+                                <img src="{{$setting->logo->getUrl()}}" alt="">
+                                <h3>{!! $setting->{'slogan_'.app()->getLocale()} !!}</h3>
+                            </div>
                             @endforeach
                                     
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col form-p p-0">
+                    <div class="col form-p p-0 tot">
                         <div class="footer-block">
-                            <div class="footer-container">
-                                <img src="/images/oman.png" alt="" srcset="" width="300" height="300">
+                            <div class="footer-title footer-mobile-title">
+                                @if (app()->getLocale() == 'ar')
+                                <h4> رؤية عمان</h4>
+                                    
+                                @else
+                                <h4> Oman Vision</h4>
+                                    
+                                @endif
+                            </div>
+                            <div class="footer-contant">
+                                <img src="/images/oman.png" alt="" srcset="">
                             </div>
                         </div>
                     </div>
@@ -40,12 +49,12 @@
                                         
                                     @endif
                                 </div>
-                                <div class="footer-contant">
-                                    <ul class="contact-details">
-                                        <li><i class="fa fa-map-marker"></i>{!! $contact->address !!}
-                                        </li>
+                                <div class="footer-contant pc">
+                                    <ul class="contact-details me">
                                         @if (app()->getLocale() == 'ar')
-        
+                                        <li><i class="fa fa-map-marker"></i> موقعنا :{!! $contact->address !!}</li>
+                                        
+                                        
                                         <li><i class="fa fa-phone"></i>  هاتفنا على :   <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
                                         @if ($contact->additional_phone)
                                             
@@ -54,7 +63,7 @@
                                         <li><i class="fa fa-envelope-o"></i>  راسلنا على : <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
                                         
                                     @else
-
+                                    <li><i class="fa fa-map-marker"></i> Location :<p>Sultanate of Oman - Muscat - the high costs of the building of the Small and Medium Enterprises Development Authority, second floor, office No. 11.2</p></li>
                                     <li><i class="fa fa-phone"></i>Call us at: <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
                                     @if ($contact->additional_phone)
                                         

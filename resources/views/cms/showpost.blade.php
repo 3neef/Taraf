@@ -19,7 +19,7 @@
                             
                         @else
                         <li class="breadcrumb-item"><a href="{{route('taraf')}}">Home</a></li>
-                        <li class="breadcrumb-item active"><a href="{{route('blog')}}">Blog</li>
+                        <li class="breadcrumb-item active"><a href="{{route('blog')}}">Blog</a></li>
                         <li class="breadcrumb-item active">{{$post->{'title_'.app()->getLocale() } }}</li>
                             
                         @endif
@@ -32,10 +32,13 @@
 <section class="blog-detail-page section-b-space ratio2_3">
     <div class="container">
         <div class="row">
-            @foreach($post->image as $key => $media)
-            <div class="col-sm-12 blog-detail"><img src="{{ $media->getUrl() }}"
-                    class="img-fluid blur-up lazyload" alt="">
-            @endforeach
+            <div class="col-sm-12 blog-detail">
+                <div class="slide-1 no-arrow home-slider">
+                @foreach($post->image as $key => $media)
+                <img src="{{ $media->getUrl() }}"
+                    class="img-fluid blur-up lazyload" alt="" style="height: 300px; width: auto;">
+                @endforeach
+                </div>
                 <h3>{{ $post->{'title_'.app()->getlocale()} }}</h3>
                 <ul class="post-social">
                     <li>{{$post->created_at->format('d-m-y')}}</li>

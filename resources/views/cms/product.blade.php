@@ -39,12 +39,14 @@
                             <div class="col-lg-6">
                                 <div class="row">
                                     <div class="col-12 product_img_scroll image-scroll" data-sticky_column>
-                                        <div>
-                                            @foreach($product->images as $key => $media)
-                                            <div><img src="{{ $media->getUrl() }}" alt=""
-                                                    class="img-fluid blur-up lazyload"></div>
-                                            @endforeach
-                                        </div>
+                                        
+                                            <div class="slide-2 no-arrow home-slider">
+                                                @foreach($product->images as $key => $media)
+                                                <img src="{{ $media->getUrl() }}" alt=""
+                                                    class="img-fluid blur-up lazyload" style="height: 300px; width: auto;">
+                                                    @endforeach
+                                            </div>
+                                        
                                     </div>
                                 </div>
                             </div>
