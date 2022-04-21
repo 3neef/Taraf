@@ -28,6 +28,7 @@ class StoreRequestedProductRequest extends FormRequest
             'email' => [
                 'string',
                 'required',
+                'email',
             ],
             'phone' => [
                 'string',

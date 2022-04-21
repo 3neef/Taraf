@@ -45,21 +45,41 @@
                     <div class="form-row row">
                         <div class="col-md-6 form-group">
                             <label for="name">الاسم</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="الاسم"
+                            <input type="text" class="form-control  {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" id="name" placeholder="الاسم"
                                 required="">
+                                @if($errors->has('name'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('name') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="country">البلد</label>
-                            <input type="text" class="form-control" name="country" id="country" placeholder="البلد " required="">
+                            <input type="text" class="form-control  {{ $errors->has('country') ? 'is-invalid' : '' }}" name="country" id="country" placeholder="البلد " required="">
+                            @if($errors->has('country'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('country') }}
+                            </div>
+                        @endif
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="phone">رقم الهاتف</label>
-                            <input type="text" class="form-control" name="phone" id="phone" placeholder="رقم الهاتف"
+                            <input type="text" class="form-control  {{ $errors->has('phone') ? 'is-invalid' : '' }}" name="phone" id="phone" placeholder="رقم الهاتف"
                                 required="">
+                                @if($errors->has('phone'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('phone') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="email">البريد الإلكتروني</label>
-                            <input type="text" class="form-control" name="email" id="email" placeholder="البريد الإلكتروني" required="">
+                            <input type="email" class="form-control  {{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" id="email" placeholder="البريد الإلكتروني" required="">
+                            @if($errors->has('email'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('email') }}
+                            </div>
+                        @endif
                         </div>
                         <div class="col-md-6 form-group">
                             <input type="text" class="form-control" name="product" id="product" placeholder="المنتج " value="{{$product->{'name_'.app()->getLocale() } }}" required="" hidden>
@@ -73,21 +93,41 @@
                     <div class="form-row row">
                         <div class="col-md-6 form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your name"
+                            <input type="text" class="form-control  {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" id="name" placeholder="Enter Your name"
                                 required="">
+                                @if($errors->has('name'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('name') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="country">Country</label>
-                            <input type="text" class="form-control" name="country" id="country" placeholder="country" required="">
+                            <input type="text" class="form-control  {{ $errors->has('country') ? 'is-invalid' : '' }}" name="country" id="country" placeholder="country" required="">
+                            @if($errors->has('country'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('country') }}
+                            </div>
+                        @endif
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="phone">Phone number</label>
-                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter your number"
+                            <input type="text" class="form-control  {{ $errors->has('phone') ? 'is-invalid' : '' }}" name="phone" id="phone" placeholder="Enter your number"
                                 required="">
+                                @if($errors->has('phone'))
+                                <div class="invalid-feedback">
+                                    {{ $errors->first('phone') }}
+                                </div>
+                            @endif
                         </div>
                         <div class="col-md-6 form-group">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Email" required="">
+                            <input type="email" class="form-control  {{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" id="email" placeholder="Email" required="">
+                            @if($errors->has('email'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('email') }}
+                            </div>
+                        @endif
                         </div>
                         <div class="col-md-6 form-group">
                             <input type="text" class="form-control" name="product" id="product" placeholder="{{$product->{'name_'.app()->getLocale() } }}" value="{{$product->{'name_'.app()->getLocale() } }}" required="" hidden>
