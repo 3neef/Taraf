@@ -104,6 +104,14 @@
                 </a>
             </li>
             @endif
+            <li>
+                <div class="whats-btn">
+                        <a href="https://api.whatsapp.com/send?phone=+96879253583&text=Hello" class="float" target="_blank">
+                            <i class="fa fa-whatsapp my-float"></i>
+                            </a>
+                </div>
+                
+            </li>
             
         </ul>
     </div>

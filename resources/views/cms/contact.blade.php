@@ -94,7 +94,8 @@
                             </div>
                             <div class="media-body">
                                 <p><a href="mailto:{{$contact->email}}">{{$contact->email}}</a></p>
-                                <p><a href="mailto:manager@6araff.com"> Manager : manager@6araff.com</a></p>
+                                <p><a href="mailto:manager@6araff.com">manager@6araff.com</a></p>
+                                <p><a href="mailto:info@6araff.com">info@6araff.com</a></p>
                                 
                             </div>
                         </li>
