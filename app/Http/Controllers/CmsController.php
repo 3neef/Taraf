@@ -187,4 +187,16 @@ class CmsController extends Controller
         return view('cms.request', compact(['product','setting', 'contact', 'socials']));
     }
 
+    public function order(){
+        $locale = app()->getLocale();
+        $setting = Setting::select(['id', 'site_name_' . $locale, 'slogan_' . $locale])
+        ->whereNotNull('site_name_' . $locale)
+        ->where('site_name_' . $locale, '!=', '')
+        ->first()
+        ->get();
+        $socials = SocialMediaLink::get();
+        $contact = Contact::first();
+        return view('cms.order', compact(['setting', 'contact', 'socials']));
+    }
+
 }

@@ -97,12 +97,14 @@
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">عن المؤسسة</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">المنتجات</a></li>
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">مدونة</a> </li>
+                                    <li><a href="{{route('order','?language='.App::getLocale())}}">الطلبات</a> </li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">للتواصل</a> </li>
                                     @else
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">Home</a></li>
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">About Us</a></li>
                                     <li><a href="{{route('products','?language='.App::getLocale())}}">Products</a></li>
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">blog</a></li>
+                                    <li><a href="{{route('order','?language='.App::getLocale())}}">Orders</a></li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">Contact Us</a></li>
                                     
                                     @endif

@@ -6,6 +6,8 @@ Route::get('/', [\App\Http\Controllers\CmsController::class, 'index'])
 Route::get('/request/{product}', [\App\Http\Controllers\CmsController::class, 'requestproduct'])
         ->name('requestproduct');
 
+Route::get('/order', [\App\Http\Controllers\CmsController::class, 'order'])
+        ->name('order');
 Route::get('/about', [\App\Http\Controllers\CmsController::class, 'about'])
         ->name('about');
 Route::get('/products', [\App\Http\Controllers\CmsController::class, 'product'])
@@ -31,11 +33,15 @@ Route::get('/home', function () {
     return redirect()->route('admin.home');
 });
 
- // Requested Product
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin'], function () {
+        // Requested Product
 
         Route::delete('requested-products/destroy', 'RequestedProductController@massDestroy')->name('requested-products.massDestroy');
         Route::resource('requested-products', 'RequestedProductController');
+
+        // Request Order
+    Route::delete('request-orders/destroy', 'RequestOrderController@massDestroy')->name('request-orders.massDestroy');
+    Route::resource('request-orders', 'RequestOrderController');
  });
 
 Auth::routes(['register' => false]);

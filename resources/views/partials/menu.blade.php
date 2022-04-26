@@ -25,6 +25,16 @@
             </a>
         </li>
         @endcan
+        @can('request_order_access')
+        <li class="c-sidebar-nav-item">
+            <a href="{{ route("admin.request-orders.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/request-orders") || request()->is("admin/request-orders/*") ? "c-active" : "" }}">
+                <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                </i>
+                {{ trans('cruds.requestOrder.title') }}
+            </a>
+        </li>
+        @endcan
 
         @can('about_us_access')
         <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }}">
