@@ -26,6 +26,7 @@ class RequestedProduct extends Model
         'email',
         'phone',
         'product',
+        'note',
         'created_at',
         'updated_at',
         'deleted_at',

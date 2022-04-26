@@ -41,6 +41,9 @@
                             {{ trans('cruds.requestedProduct.fields.product') }}
                         </th>
                         <th>
+                            {{__('Note')}}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -68,6 +71,9 @@
                             </td>
                             <td>
                                 {{ $requestedProduct->product ?? '' }}
+                            </td>
+                            <td>
+                                {{ $requestedProduct->note ?? '' }}
                             </td>
                             <td>
                                 @can('requested_product_show')

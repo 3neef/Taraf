@@ -38,6 +38,10 @@ class StoreRequestedProductRequest extends FormRequest
                 'string',
                 'required',
             ],
+            'note' => [
+                'string',
+                'nullable',
+            ],
         ];
     }
 }

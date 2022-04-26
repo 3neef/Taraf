@@ -63,6 +63,14 @@
                             {{ $requestedProduct->product }}
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{__('Note')}}
+                        </th>
+                        <td>
+                            {{ $requestedProduct->note }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

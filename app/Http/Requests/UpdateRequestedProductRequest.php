@@ -37,6 +37,10 @@ class UpdateRequestedProductRequest extends FormRequest
                 'string',
                 'required',
             ],
+            'note' => [
+                'string',
+                'nullable',
+            ],
         ];
     }
 }

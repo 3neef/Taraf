@@ -82,6 +82,15 @@
                         @endif
                         </div>
                         <div class="col-md-6 form-group">
+                            <label for="note">الملاحظات </label>
+                            <input type="note" class="form-control  {{ $errors->has('note') ? 'is-invalid' : '' }}" name="note" id="note" placeholder="الملاحظات " >
+                            @if($errors->has('note'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('note') }}
+                            </div>
+                        @endif
+                        </div>
+                        <div class="col-md-6 form-group">
                             <input type="text" class="form-control" name="product" id="product" placeholder="المنتج " value="{{$product->{'name_'.app()->getLocale() } }}" required="" hidden>
                         </div>
                         <div class="col-md-12 form-group">
@@ -129,6 +138,15 @@
                             </div>
                         @endif
                         </div>
+                        <div class="col-md-6 form-group">
+                            <label for="note">Note </label>
+                            <input type="note" class="form-control  {{ $errors->has('note') ? 'is-invalid' : '' }}" name="note" id="note" placeholder="note " >
+                            @if($errors->has('note'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('note') }}
+                            </div>
+                        @endif
+                        </div
                         <div class="col-md-6 form-group">
                             <input type="text" class="form-control" name="product" id="product" placeholder="{{$product->{'name_'.app()->getLocale() } }}" value="{{$product->{'name_'.app()->getLocale() } }}" required="" hidden>
                         </div>
