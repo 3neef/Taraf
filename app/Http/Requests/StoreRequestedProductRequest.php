@@ -11,7 +11,7 @@ class StoreRequestedProductRequest extends FormRequest
 {
     public function authorize()
     {
-        return Gate::allows('requested_product_create');
+        return true;
     }
 
     public function rules()

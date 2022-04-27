@@ -118,19 +118,24 @@
                                     @foreach ($category->products as $product )
                                     <div class="product-box">
                                         <div class="img-wrapper">
-                                            @foreach ($product->images as $key => $media)
                                             <div class="front">
-                                                <a href="{{route('show.product', $product)}}"><img
+                                                <a href="{{route('show.product', $product)}}">
+                                                    @foreach ($product->images as $key => $media)
+                                                    <img
                                                     src="{{ $media->getUrl() }}"
                                                     class="img-fluid blur-up lazyload bg-img" alt="">
+                                                    @endforeach
                                                 </a>
                                             </div>
                                             <div class="back">
-                                                <a href="{{route('show.product', $product)}}"><img
+                                                <a href="{{route('show.product', $product)}}">
+                                                    @foreach ($product->images as $key => $media)
+                                                    <img
                                                     src="{{ $media->getUrl() }}"
-                                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
+                                                    class="img-fluid blur-up lazyload bg-img" alt="">
+                                                    @endforeach
+                                                </a>
                                                 </div>
-                                            @endforeach
                                         </div>
                                         <div class="product-info">
                                             <a href="{{route('show.product', $product)}}">

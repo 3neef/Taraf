@@ -33,7 +33,7 @@ class RequestOrderController extends Controller
     {
         $requestOrder = RequestOrder::create($request->all());
 
-        return redirect()->back();
+        return back()->withInput()->with('message', 'Your order is successfully submitted. We will contact you soon.');
     }
 
     public function edit(RequestOrder $requestOrder)

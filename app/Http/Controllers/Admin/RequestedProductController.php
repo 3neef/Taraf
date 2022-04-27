@@ -33,7 +33,7 @@ class RequestedProductController extends Controller
     {
         $requestedProduct = RequestedProduct::create($request->all());
 
-        return back()->withInput();
+        return back()->withInput()->with('message', 'Your order is successfully submitted. We will contact you soon.');
 
     }
 
