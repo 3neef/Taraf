@@ -77,13 +77,49 @@
             @endif --}}
             <div class="step-bg">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="step-box">
                             <div>
                                 <div class="steps"><i class="fa fa-eye" aria-hidden="true"></i></div>
                                 @if (App::getLocale() == 'ar')
+                             
+                                <h4>رؤيتنا</h4>
                                 
-                                <h4>القيم</h4>
+                                @else
+                                <h4>Visions</h4>
+                                @endif
+                                @foreach ($visions as $vision)
+                                    
+                                <p>&#9867;{!! $vision->{'description_'.app()->getLocale()} !!}</p> <br>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="step-box">
+                            <div>
+                                <div class="steps"><i class="fa fa-bullseye" aria-hidden="true"></i></div>
+                                @if (App::getLocale() == 'ar')
+                             
+                                <h4>رسالتنا</h4>
+                                
+                                @else
+                                <h4>Missions</h4>
+                                @endif
+                                @foreach ($missions as $mission)
+                                    
+                                <p>&#9867;{!! $mission->{'description_'.app()->getLocale()} !!}</p> <br>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="step-box">
+                            <div>
+                                <div class="steps"><i class="fa fa-check" aria-hidden="true"></i> </div>
+                                @if (App::getLocale() == 'ar')
+                                
+                                <h4>قيمنا</h4>
                                 
                                 @else
                                
@@ -96,13 +132,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="step-box">
                             <div>
                                 <div class="steps"><i class="fa fa-compass" aria-hidden="true"></i></div>
                                 @if (App::getLocale() == 'ar')
                                 
-                                <h4>الاهداف</h4>
+                                <h4>أهدافنا</h4>
                                 
                                 @else
                                 <h4>goals</h4>
@@ -110,24 +146,6 @@
                                 @foreach ($goals as $goal)
                                     
                                 <p>&#9867;{!! $goal->{'description_'.app()->getLocale()} !!}</p> <br>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="step-box">
-                            <div>
-                                <div class="steps"><i class="fa fa-bullseye" aria-hidden="true"></i></div>
-                                @if (App::getLocale() == 'ar')
-                             
-                                <h4>المهام</h4>
-                                
-                                @else
-                                <h4>Missions</h4>
-                                @endif
-                                @foreach ($missions as $mission)
-                                    
-                                <p>&#9867;{!! $mission->{'description_'.app()->getLocale()} !!}</p> <br>
                                 @endforeach
                             </div>
                         </div>

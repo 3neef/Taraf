@@ -15,6 +15,7 @@ use App\Models\Contact;
 use App\Models\Value;
 use App\Models\Goal;
 use App\Models\Mission;
+use App\Models\Vision;
 use App\Models\SocialMediaLink;
 
 
@@ -97,8 +98,9 @@ class CmsController extends Controller
         $values = Value::all();
         $goals = Goal::all();
         $missions = Mission::all();
+        $visions = Vision::all();
         // dd($about);
-        return view('cms.about', compact(['about', 'setting', 'contact', 'values', 'goals', 'missions', 'socials']));
+        return view('cms.about', compact(['about', 'setting', 'contact', 'values', 'goals', 'missions', 'visions', 'socials']));
     }
     public function blog()
     {

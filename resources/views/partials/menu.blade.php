@@ -55,16 +55,16 @@
                             </a>
                         </li>
                     @endcan
-                    @can('value_access')
-            <li class="c-sidebar-nav-item">
-                <a href="{{ route("admin.values.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/values") || request()->is("admin/values/*") ? "c-active" : "" }}">
-                    <i class="fa-fw fas fa-angle-double-up c-sidebar-nav-icon">
-
-                    </i>
-                    {{ trans('cruds.value.title') }}
-                </a>
-            </li>
-        @endcan
+                    @can('vision_access')
+                    <li class="c-sidebar-nav-item">
+                        <a href="{{ route("admin.visions.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/visions") || request()->is("admin/visions/*") ? "c-active" : "" }}">
+                            <i class="fa-fw fas fa-eye c-sidebar-nav-icon">
+            
+                            </i>
+                            {{ trans('cruds.vision.title') }}
+                        </a>
+                    </li>
+                    @endcan
         @can('mission_access')
             <li class="c-sidebar-nav-item">
                 <a href="{{ route("admin.missions.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/missions") || request()->is("admin/missions/*") ? "c-active" : "" }}">
@@ -74,6 +74,16 @@
                     {{ trans('cruds.mission.title') }}
                 </a>
             </li>
+        @endcan
+        @can('value_access')
+        <li class="c-sidebar-nav-item">
+            <a href="{{ route("admin.values.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/values") || request()->is("admin/values/*") ? "c-active" : "" }}">
+                <i class="fa-fw fas fa-angle-double-up c-sidebar-nav-icon">
+
+                </i>
+                {{ trans('cruds.value.title') }}
+            </a>
+        </li>
         @endcan
         @can('goal_access')
             <li class="c-sidebar-nav-item">
@@ -105,16 +115,6 @@
                 </a>
             </li>
         @endcan
-        @can('vision_access')
-        <li class="c-sidebar-nav-item">
-            <a href="{{ route("admin.visions.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/visions") || request()->is("admin/visions/*") ? "c-active" : "" }}">
-                <i class="fa-fw fas fa-eye c-sidebar-nav-icon">
-
-                </i>
-                {{ trans('cruds.vision.title') }}
-            </a>
-        </li>
-    @endcan
                 </ul>
             </li>
         @endcan

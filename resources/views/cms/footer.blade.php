@@ -99,6 +99,8 @@
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">مدونة</a> </li>
                                     <li><a href="{{route('order','?language='.App::getLocale())}}">الطلبات</a> </li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">للتواصل</a> </li>
+                                    <li><a href="http://webmail.6araff.com/">بوابة الايميل</a></li>
+                                    <li><a href="{{route('login')}}">لوحة التحكم</a></li>
                                     @else
                                     <li><a href="{{route('taraf','?language='.App::getLocale())}}">Home</a></li>
                                     <li><a href="{{route('about','?language='.App::getLocale())}}">About Us</a></li>
@@ -106,6 +108,8 @@
                                     <li><a href="{{route('blog','?language='.App::getLocale())}}">blog</a></li>
                                     <li><a href="{{route('order','?language='.App::getLocale())}}">Orders</a></li>
                                     <li><a href="{{route('contact','?language='.App::getLocale())}}">Contact Us</a></li>
+                                    <li><a href="http://webmail.6araff.com/">Email-Gateway</a></li>
+                                    <li><a href="{{route('login')}}">Dashboard</a></li>
                                     
                                     @endif
                                 </ul>
