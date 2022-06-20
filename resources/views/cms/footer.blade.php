@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col form-p p-0 tot">
+                    {{-- <div class="col form-p p-0 tot">
                         <div class="footer-block">
                             <div class="footer-title footer-mobile-title">
                                 @if (app()->getLocale() == 'ar')
@@ -36,7 +36,7 @@
                                 <img src="/images/oman.png" alt="" srcset="">
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col coool">
                         <div class="footer-block">
                             <div class="footer-container">
@@ -52,24 +52,24 @@
                                 <div class="footer-contant pc">
                                     <ul class="contact-details me">
                                         @if (app()->getLocale() == 'ar')
-                                        <li><i class="fa fa-map-marker"></i> موقعنا :{!! $contact->address !!}</li>
+                                        <li><i class="fa fa-map-marker" style="margin-left: 5px"></i> موقعنا :{!! $contact->address !!}</li>
                                         
                                         
-                                        <li><i class="fa fa-phone"></i>  هاتفنا على :   <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
+                                        <li><i class="fa fa-phone" style="margin-left: 5px"></i>  هاتفنا على :   <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
                                         @if ($contact->additional_phone)
                                             
-                                        <li><i class="fa fa-phone"></i>  او على :<a href="tel:{{$contact->additional_phone}}"> {{$contact->additional_phone}}</a></li>
+                                        <li><i class="fa fa-phone" style="margin-left: 5px"></i>  او على :<a href="tel:{{$contact->additional_phone}}"> {{$contact->additional_phone}}</a></li>
                                         @endif
-                                        <li><i class="fa fa-envelope-o"></i>  راسلنا على : <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
+                                        <li><i class="fa fa-envelope-o" style="margin-left: 5px"></i>  راسلنا على : <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
                                         
                                     @else
-                                    <li><i class="fa fa-map-marker"></i> Location :<p>Sultanate of Oman - Muscat - the high costs of the building of the Small and Medium Enterprises Development Authority, second floor, office No. 11.2</p></li>
-                                    <li><i class="fa fa-phone"></i>Call us at: <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
+                                    <li><i class="fa fa-map-marker" style="margin-right: 5px"></i> Location :<p>Sultanate of Oman - Muscat - the high costs of the building of the Small and Medium Enterprises Development Authority, second floor, office No. 11.2</p></li>
+                                    <li><i class="fa fa-phone" style="margin-right: 5px"></i>Call us at: <a href="tel:{{$contact->phone}}"> {{$contact->phone}}</a> </li>
                                     @if ($contact->additional_phone)
                                         
-                                    <li><i class="fa fa-phone"></i>Or at: <a href="tel:{{$contact->additional_phone}}"> {{$contact->additional_phone}}</a></li>
+                                    <li><i class="fa fa-phone" style="margin-right: 5px"></i>Or at: <a href="tel:{{$contact->additional_phone}}"> {{$contact->additional_phone}}</a></li>
                                     @endif
-                                    <li><i class="fa fa-envelope-o"></i>Email Us: <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
+                                    <li><i class="fa fa-envelope-o" style="margin-right: 5px"></i>Email Us: <a href="mailto:{{$contact->email}}">{{$contact->email}}</a></li>
                                         
                                     @endif
                                     </ul>

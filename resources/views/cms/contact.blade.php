@@ -44,7 +44,7 @@
         <div class="row section-b-space">
             <div class="col-lg-7 map">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122061.4186021901!2d54.042384128405764!3d17.05212937068453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3dd3df964481c879%3A0xa5e758c7c82eb314!2sSalalah%2C%20Oman!5e0!3m2!1sen!2s!4v1647531646051!5m2!1sen!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.588088597058!2d58.37298500000001!3d23.583233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91ffd7754d7d45%3A0x417555f31d937469!2sAl%20Raffd%20Fund!5e0!3m2!1sen!2s!4v1655731093678!5m2!1sen!2s"
                     allowfullscreen></iframe>
             </div>
             <div class="col-lg-5">

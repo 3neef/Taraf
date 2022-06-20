@@ -108,8 +108,8 @@ return [
         ],
     ],
     'category' => [
-        'title'          => 'categoy',
-        'title_singular' => 'categoy',
+        'title'          => 'category',
+        'title_singular' => 'category',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => ' ',
