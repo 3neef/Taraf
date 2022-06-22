@@ -17,6 +17,7 @@ use App\Models\Goal;
 use App\Models\Mission;
 use App\Models\Vision;
 use App\Models\SocialMediaLink;
+use App\Models\Team;
 
 
 
@@ -91,6 +92,7 @@ class CmsController extends Controller
         ->first()
         ->with(['media'])
         ->get();
+        $teams = Team::with(['media'])->get();
         $socials = SocialMediaLink::get();
         // get contacts
         $contact = Contact::first();
@@ -99,8 +101,8 @@ class CmsController extends Controller
         $goals = Goal::all();
         $missions = Mission::all();
         $visions = Vision::all();
-        // dd($about);
-        return view('cms.about', compact(['about', 'setting', 'contact', 'values', 'goals', 'missions', 'visions', 'socials']));
+        // dd($teams);
+        return view('cms.about', compact(['about', 'setting', 'contact', 'values', 'goals', 'missions', 'visions', 'socials', 'teams']));
     }
     public function blog()
     {
