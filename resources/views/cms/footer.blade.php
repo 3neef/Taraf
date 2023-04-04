@@ -135,11 +135,11 @@
                 <div class="col-xl-6 col-md-6 col-sm-12">
                     <div class="footer-end">
                         @if (App::getLocale() == 'ar')
-                        <p>كل الحقوق محفوظة للصالح <span>شركة طرف</span><i class="fa fa-copyright" aria-hidden="true"></i> 2022  <span>&nbsp;&nbsp;</span> طورت بواسطة شركة<a href="https://www.flixtechnology.com/"> Flix Technology</a></p>
+                        <p>كل الحقوق محفوظة للصالح <span>شركة طرف</span><i class="fa fa-copyright" aria-hidden="true"></i> 2022  <span>&nbsp;&nbsp;</span> طورت بواسطة <a href="https://my-portfol.netlify.app/"> مازن حافظ</a></p>
                         
                         @else
                         
-                        <p>Copyright<i class="fa fa-copyright" aria-hidden="true"></i> 2022 <span>Taraf</span> <span>&nbsp;&nbsp;</span> Developed by <a href="https://www.flixtechnology.com/"> Flix Technology</a></p>
+                        <p>Copyright<i class="fa fa-copyright" aria-hidden="true"></i> 2022 <span>Taraf</span> <span>&nbsp;&nbsp;</span> Developed by <a href="https://my-portfol.netlify.app/"> Mazin Hafiz</a></p>
                         @endif
                     </div>
                 </div>
